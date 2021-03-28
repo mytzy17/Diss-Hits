@@ -1,4 +1,4 @@
-# dissit
+# Diss-Hits
 Original App Design Project - README Template
 ===
 
