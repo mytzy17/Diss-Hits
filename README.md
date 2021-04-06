@@ -144,14 +144,42 @@ An app where new/underground artists can upload their music without the algorith
 
 ### [BONUS] Interactive Prototype
 
-## Schema 
-[This section will be completed in Unit 9]
-### Models
-[Add table of models]
-### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+# Schema 
+## Models
+### User
+| Property      | Type   | Description                  |
+| :------------ |:------ | :----------------------------|
+| Name          | string | The artist's name.           |
+| ID_user       | int    | Unique identifier for artist.|
+| Password      | string | A password for the user.     |
+
+### Song
+| Property      | Type         | Description                  |
+| :------------ |:------------ | :--------------------------- |
+| Name          | string       | The song's name.             |
+| ID_Song       | int          | Unique identifier for artist.|
+| File          | file         | The sound file of the song.  |
+| Lyrics        | string       | Lyrics for the song.         |
+
+
+### Author 
+| Property      | Type   | Description                        |
+| :------------ |:------ | :--------------------------------- |
+| Name          | string | The artist's name.                 |
+| ID_author     | int    | Unique identifier for artist.      |
+| Password      | string | A password for the user.           |
+| Genre         | string | Author given identifier for music. |
+
+# Networking
+* Create Account*
+   * (Read/GET) Query for name and password
+   * (Create/POST) Create a new user 
+   * (Create/POST) Create a new Author 
+* Homescreen*
+   * (Read/GET) Query for a song
+* *Artist Upload
+   * (Create/POST) Create a new song, add lyrics
+   * (Update/PUT) Update song file or lyrics
 
 ### Contributions 
     
