@@ -28,53 +28,46 @@ An app where new/underground artists can upload their music without the algorith
 
 **Required Must-have Stories**
 
-*  **Artist** 
-    *  Login / Stay Logged in
-    *  Logout 
-    *  Create an account
-    * Build bio 
-    * Genre 
-    * Birthdate 
-    * Location
-
-* **Users**
-    * Create an account
-    * Log in / stay logged in
-    * Log out 
-    * Account info 
-        * username 
-        * email 
-        * birthdate 
-
+*  **Users** 
+    * - [X] Login / Stay Logged In
+    * - [X] Logout
+    * - [X] Create an account
+    * - [ ] Build bio 
+    * - [ ] Genre 
+    * - [ ] Birthdate 
+    * - [ ] Location
+    * - [ ] Account info 
+           * username 
+           * email 
+           * birthdate 
+        
 * **Playlist** 
-    * a place to upload songs 
+    * - [ ] a place to upload songs 
         * file size concern?
-    * conditionals 
-        * explicit 
-        * lyrics 
-        * cover / art 
-        * instrument 
-            * limit the instruments: 5 max 
-            * check box - all that apply 
-
+    * - [ ] conditionals 
+           * explicit 
+           * lyrics 
+           * cover / art 
+           * instrument 
+               * limit the instruments: 5 max 
+               * check box - all that apply 
 
 * **search bar**  
-    * search by genre 
-    * search by title 
-    * search by artist name 
-    * search by lyrics 
-    * search by instrument
+    * - [ ] search by genre 
+    * - [ ] search by title 
+    * - [ ] search by artist name 
+    * - [ ] search by lyrics 
+    * - [ ] search by instrument
 
 * **home page** 
-    * display existing playlist 
-    * categories by genre 
-        * prompts the user to start listening and create new playlists 
+    * - [ ] display existing playlist 
+    * - [ ] categories by genre 
+         * prompts the user to start listening and create new playlists 
      
-    
 * **current song playing** 
-    * user can add curent song to specific playlist 
-    * double tap to like
-        * this adds the song to "liked" playlist 
+    * - [ ] user can add curent song to specific playlist 
+    * - [ ] double tap to like
+         * this adds the song to "liked" playlist 
 
 
 ---
@@ -85,7 +78,6 @@ An app where new/underground artists can upload their music without the algorith
 * *counter for times song has been played*
 * *explore mode vs. currated mode - toggle switch*
 * *delete songs form playlists*
-* 
 
 
 ### 2. Screen Archetypes
@@ -142,7 +134,8 @@ An app where new/underground artists can upload their music without the algorith
 ### [BONUS] Digital Wireframes & Mockups
 <img src="https://i.ibb.co/0qqN2Vk/Screen-Shot-2021-03-23-at-6-49-51-PM.png" width=200>
 
-### [BONUS] Interactive Prototype
+### [GIF] Sprint Plan 1
+<img src="http://g.recordit.co/KvncSVRtc5.gif" width=200>
 
 # Schema 
 ## Models
