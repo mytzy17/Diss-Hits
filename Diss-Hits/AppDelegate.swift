@@ -12,31 +12,52 @@ import GoogleSignIn
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-      if let error = error {
-        if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-          print("The user has not signed in before or they have since signed out.")
-        } else {
-          print("\(error.localizedDescription)")
-        }
-        return
-      }
-      // Perform any operations on signed in user here.
-      let userId = user.userID                  // For client-side use only!
-      let idToken = user.authentication.idToken // Safe to send to the server
-      let fullName = user.profile.name
-      let givenName = user.profile.givenName
-      let familyName = user.profile.familyName
-      let email = user.profile.email
-      // ...
+    struct userInfo {
+        var userId = (String)();                  //for clients-side use only
+        var idToken = (String)();                 //Safe to send to server
+        var fullName = (String)();
+        var givenName = (String)();
+        var familyName = (String)();
+        var email = (String)();
     }
     
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
-              withError error: Error!) {
-      // Perform any operations when the user disconnects from app here.
-      // ...
+    var loggedInInfo = userInfo();
+
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            if(error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
+                print("The user has not signed in before or they have since signed out.");
+            } else {
+                print("\(error.localizedDescription)");
+            }
+            return;
+        }
+        loggedInInfo.userId = user.userID;                  //for clients-side use only
+        loggedInInfo.idToken = user.authentication.idToken; //Safe to send to server
+        loggedInInfo.fullName = user.profile.name;
+        loggedInInfo.givenName = user.profile.givenName;
+        loggedInInfo.familyName = user.profile.familyName;
+        loggedInInfo.email = user.profile.email;
+        // ...
+        print("User: \(String(describing: loggedInInfo.fullName))")
     }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations for when the user signs out of the app here
+        print("Signed Out!")
+        
+        loggedInInfo.userId = String();
+        loggedInInfo.idToken = String();
+        loggedInInfo.fullName = String();
+        loggedInInfo.givenName = String();
+        loggedInInfo.familyName = String();
+        loggedInInfo.email = String();
+    }
+    
+    func getUserData() -> userInfo {
+        return loggedInInfo;
+    }
+    
     
     @available(iOS 9.0, *)
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
