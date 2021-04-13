@@ -128,6 +128,8 @@ An app where new/underground artists can upload their music without the algorith
        * play it / shuffle it 
 
 ## Wireframes
+[Miro Board: Wireframes](https://miro.com/app/board/o9J_lPfTTs8=/)
+
 [Add picture of your hand sketched wireframes in this section]
 <img src="https://i.ibb.co/Fx30GJk/Screen-Shot-2021-03-24-at-5-47-35-PM.png" width=600>
 
