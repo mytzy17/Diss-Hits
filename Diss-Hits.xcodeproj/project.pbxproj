@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47EEBBA1504638CBCBF4B213 /* Pods_Diss_Hits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */; };
 		CF88C79F261D2DEA00C479B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88C79E261D2DEA00C479B2 /* AppDelegate.swift */; };
 		CF88C7A1261D2DEA00C479B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88C7A0261D2DEA00C479B2 /* SceneDelegate.swift */; };
 		CF88C7A3261D2DEA00C479B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88C7A2261D2DEA00C479B2 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diss_Hits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51E522DA6473670EAD4B8BF3 /* Pods-Diss-Hits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diss-Hits.release.xcconfig"; path = "Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits.release.xcconfig"; sourceTree = "<group>"; };
 		CF88C79B261D2DEA00C479B2 /* Diss-Hits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diss-Hits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF88C79E261D2DEA00C479B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF88C7A0261D2DEA00C479B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		CF88C7A7261D2DEA00C479B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF88C7AA261D2DEA00C479B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF88C7AC261D2DEA00C479B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D15D0088FB881A1D6EC3F0A2 /* Pods-Diss-Hits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diss-Hits.debug.xcconfig"; path = "Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47EEBBA1504638CBCBF4B213 /* Pods_Diss_Hits.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		795AFCEB5DE633FC05D25B8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D15D0088FB881A1D6EC3F0A2 /* Pods-Diss-Hits.debug.xcconfig */,
+				51E522DA6473670EAD4B8BF3 /* Pods-Diss-Hits.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CF88C792261D2DEA00C479B2 = {
 			isa = PBXGroup;
 			children = (
 				CF88C79D261D2DEA00C479B2 /* Diss-Hits */,
 				CF88C79C261D2DEA00C479B2 /* Products */,
+				795AFCEB5DE633FC05D25B8E /* Pods */,
+				D88758CDD44E851205ED9888 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = "Diss-Hits";
 			sourceTree = "<group>";
 		};
+		D88758CDD44E851205ED9888 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CF88C7AF261D2DEA00C479B2 /* Build configuration list for PBXNativeTarget "Diss-Hits" */;
 			buildPhases = (
+				E3DE98E3AD242A1B99036411 /* [CP] Check Pods Manifest.lock */,
 				CF88C797261D2DEA00C479B2 /* Sources */,
 				CF88C798261D2DEA00C479B2 /* Frameworks */,
 				CF88C799261D2DEA00C479B2 /* Resources */,
+				E7024788836F1103D337582F /* [CP] Embed Pods Frameworks */,
+				5C3FAFAC870D142F5ACB0322 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +159,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C3FAFAC870D142F5ACB0322 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3DE98E3AD242A1B99036411 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Diss-Hits-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7024788836F1103D337582F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CF88C797261D2DEA00C479B2 /* Sources */ = {
@@ -283,6 +370,7 @@
 		};
 		CF88C7B0261D2DEA00C479B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D15D0088FB881A1D6EC3F0A2 /* Pods-Diss-Hits.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +389,7 @@
 		};
 		CF88C7B1261D2DEA00C479B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51E522DA6473670EAD4B8BF3 /* Pods-Diss-Hits.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
