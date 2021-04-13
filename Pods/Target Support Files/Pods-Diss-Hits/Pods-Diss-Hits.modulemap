@@ -1,0 +1,6 @@
+framework module Pods_Diss_Hits {
+  umbrella header "Pods-Diss-Hits-umbrella.h"
+
+  export *
+  module * { export * }
+}
