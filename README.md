@@ -34,8 +34,6 @@ An app where new/underground artists can upload their music without the algorith
     * - [X] Create an account
     * - [ ] Build bio 
     * - [ ] Genre 
-    * - [ ] Birthdate 
-    * - [ ] Location
     * - [ ] Account info 
            * username 
            * email 
