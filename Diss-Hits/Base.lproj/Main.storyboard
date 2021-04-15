@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LoginView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,14 +25,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuH-Km-uus">
-                                <rect key="frame" x="167" y="645" width="57" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign out"/>
-                                <connections>
-                                    <action selector="signOutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e1f-V4-6Zc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0h-Ms-S2M">
                                 <rect key="frame" x="157" y="296" width="76" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,16 +39,17 @@
                     <connections>
                         <outlet property="label" destination="y0h-Ms-S2M" id="rsL-cQ-js5"/>
                         <outlet property="signInButton" destination="gHO-IJ-YQ4" id="z12-jV-wBT"/>
+                        <segue destination="LKB-8G-VKV" kind="presentation" identifier="loginToHome" id="djG-Bd-zhf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-674" y="71"/>
+            <point key="canvasLocation" x="-654" y="70"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="aFi-gH-Gbw">
             <objects>
-                <tableViewController id="6bW-zc-wEt" sceneMemberID="viewController">
+                <tableViewController id="6bW-zc-wEt" customClass="HomeTableViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e1Y-Lh-0Pp">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +69,13 @@
                             <outlet property="delegate" destination="6bW-zc-wEt" id="19w-mM-pXt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="tHF-O2-ZoN"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="tHF-O2-ZoN">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="HCb-qT-i1k">
+                            <connections>
+                                <action selector="clickLogout:" destination="6bW-zc-wEt" id="w0k-vr-mrY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBx-4Y-L4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +84,7 @@
         <!--Navigation Controller-->
         <scene sceneID="31l-Hj-OAw">
             <objects>
-                <navigationController id="LKB-8G-VKV" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="LKB-8G-VKV" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y9K-vv-jf6">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

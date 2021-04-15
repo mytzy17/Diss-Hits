@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         loggedInInfo.familyName = user.profile.familyName;
         loggedInInfo.email = user.profile.email;
         // ...
-        print("User: \(String(describing: loggedInInfo.fullName))")
+        print("User: \(String(describing: loggedInInfo.fullName))");
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
