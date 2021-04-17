@@ -11,7 +11,7 @@
         <!--LoginView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" title="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="y0h-Ms-S2M" id="rsL-cQ-js5"/>
                         <outlet property="signInButton" destination="gHO-IJ-YQ4" id="z12-jV-wBT"/>
                         <segue destination="LKB-8G-VKV" kind="presentation" identifier="loginToHome" id="djG-Bd-zhf"/>
                     </connections>
@@ -84,7 +83,7 @@
         <!--Navigation Controller-->
         <scene sceneID="31l-Hj-OAw">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="LKB-8G-VKV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomePageView" modalPresentationStyle="fullScreen" id="LKB-8G-VKV" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y9K-vv-jf6">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
