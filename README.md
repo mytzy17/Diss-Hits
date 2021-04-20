@@ -32,7 +32,7 @@ An app where new/underground artists can upload their music without the algorith
     * - [X] Login / Stay Logged In
     * - [X] Logout
     * - [X] Create an account
-    * - [ ] Build bio 
+    * - [X] Build bio 
     * - [ ] Genre 
     * - [ ] Account info 
            * username 
