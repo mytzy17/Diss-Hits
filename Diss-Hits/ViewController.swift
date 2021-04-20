@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance()?.presentingViewController = self
 
         // Automatically sign in the user.
-        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
         NotificationCenter.default.addObserver(self,
                                                        selector: #selector(userDidSignInGoogle(_:)),
@@ -48,22 +47,31 @@ class ViewController: UIViewController {
             let query = PFQuery(className:"User");
             query.whereKey("GID", equalTo: GID.userId);
             
-            query.findObjectsInBackground { (objects: [PFObject]?, error: Error?)
+            //let count = query.countObjects(nil);
+            
+            /*
+            if(count == 0) {
+                self.performSegue(withIdentifier: "RegisterSegue", sender: self);
+            } else {
+                self.performSegue(withIdentifier: "loginToHome", sender: nil);
+            }
+             */
+       
+            query.countObjectsInBackground() { (count: Int32, error: Error?)
                 in
                 if let error = error {
                     //could not find user
                     print(error.localizedDescription);
-                } else if let objects = objects {
+                } else {
                     //find succeeded
-                    if(objects.count == 0) {
+                    if(count == 0) {
                         self.performSegue(withIdentifier: "RegisterSegue", sender: self);
                     } else {
                         self.performSegue(withIdentifier: "loginToHome", sender: self);
                     }
                 }
             }
-            // }
-                
+        
         } else {
             // User signed out
                 

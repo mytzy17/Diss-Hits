@@ -78,9 +78,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NXs-sq-uUb">
-                                <rect key="frame" x="16" y="382" width="358" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="NXs-sq-uUb">
+                                <rect key="frame" x="16" y="379.66666666666669" width="358" height="130.33333333333331"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <color key="tintColor" systemColor="systemGray5Color"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -93,6 +93,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="tryToRegister:" destination="23f-4W-4GJ" eventType="touchUpInside" id="5hO-iB-HhJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aHU-1g-5cj"/>
@@ -106,6 +109,7 @@
                             <constraint firstItem="9s8-Nl-mla" firstAttribute="leading" secondItem="aHU-1g-5cj" secondAttribute="leading" constant="161" id="Yon-o1-xD3"/>
                             <constraint firstItem="NXs-sq-uUb" firstAttribute="top" secondItem="DYq-BQ-IWf" secondAttribute="bottom" constant="22" id="aqx-3d-tlu"/>
                             <constraint firstItem="DYq-BQ-IWf" firstAttribute="top" secondItem="tUG-bE-mjw" secondAttribute="bottom" constant="15" id="bYm-Ac-Lhe"/>
+                            <constraint firstItem="9s8-Nl-mla" firstAttribute="top" secondItem="NXs-sq-uUb" secondAttribute="bottom" constant="102" id="dh5-dg-x80"/>
                             <constraint firstItem="aHU-1g-5cj" firstAttribute="bottom" secondItem="9s8-Nl-mla" secondAttribute="bottom" constant="162" id="jtp-io-S54"/>
                             <constraint firstItem="DYq-BQ-IWf" firstAttribute="leading" secondItem="aHU-1g-5cj" secondAttribute="leading" constant="20" id="lpG-zB-v0U"/>
                             <constraint firstItem="aHU-1g-5cj" firstAttribute="trailing" secondItem="NXs-sq-uUb" secondAttribute="trailing" constant="16" id="nAD-GF-kmE"/>
@@ -115,6 +119,11 @@
                             <constraint firstItem="aHU-1g-5cj" firstAttribute="trailing" secondItem="R0V-cA-KMG" secondAttribute="trailing" constant="16" id="xY3-Rr-Xyp"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionField" destination="NXs-sq-uUb" id="7UL-hB-4DL"/>
+                        <outlet property="usernameField" destination="R0V-cA-KMG" id="4q5-Mw-08z"/>
+                        <segue destination="LKB-8G-VKV" kind="presentation" identifier="RegisterToHome" id="e44-ht-X6p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lRJ-fz-1Od" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -172,6 +181,9 @@
             <point key="canvasLocation" x="137" y="71"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e44-ht-X6p"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="logo2 copy" width="180" height="101"/>
         <namedColor name="AccentColor">
@@ -182,6 +194,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
