@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import Parse
 
 class ViewController: UIViewController {
     
@@ -27,12 +28,12 @@ class ViewController: UIViewController {
                                                        name: .signInGoogleCompleted,
                                                        object: nil)
         
-        updateScreen()
+        //updateScreen()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         if(GIDSignIn.sharedInstance()?.hasPreviousSignIn() == true) {
-            self.performSegue(withIdentifier: "loginToHome", sender: self);
+            //self.performSegue(withIdentifier: "loginToHome", sender: self);
         }
     }
     
@@ -40,10 +41,28 @@ class ViewController: UIViewController {
             
         if ((GIDSignIn.sharedInstance()?.currentUser) != nil) {
             // User signed in
-            
 //            print("perhaps?")
             
-            self.performSegue(withIdentifier: "loginToHome", sender: self)
+            // doesUserExist {
+            let GID = appDelegate.getUserData();
+            let query = PFQuery(className:"User");
+            query.whereKey("GID", equalTo: GID.userId);
+            
+            query.findObjectsInBackground { (objects: [PFObject]?, error: Error?)
+                in
+                if let error = error {
+                    //could not find user
+                    print(error.localizedDescription);
+                } else if let objects = objects {
+                    //find succeeded
+                    if(objects.count == 0) {
+                        self.performSegue(withIdentifier: "RegisterSegue", sender: self);
+                    } else {
+                        self.performSegue(withIdentifier: "loginToHome", sender: self);
+                    }
+                }
+            }
+            // }
                 
         } else {
             // User signed out
