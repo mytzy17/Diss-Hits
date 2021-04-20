@@ -43,9 +43,9 @@ class ViewController: UIViewController {
 //            print("perhaps?")
             
             // doesUserExist {
-            let GID = appDelegate.getUserData();
-            let query = PFQuery(className:"User");
-            query.whereKey("GID", equalTo: GID.userId);
+            let userData = appDelegate.getUserData();
+            let query = PFQuery(className:"_User");
+            query.whereKey("GID", equalTo: userData.userId);
             
             //let count = query.countObjects(nil);
             

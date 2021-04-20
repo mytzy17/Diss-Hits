@@ -43,7 +43,7 @@ class RegisterViewController: ViewController {
         
         user["GID"] = userInfo.userId;
         user["Bio"] = description;
-        //user["email"] = userInfo.email;
+        user["email"] = userInfo.email;
         
         user.signUpInBackground { (success, error) in
             if success {
