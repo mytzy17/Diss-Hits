@@ -32,10 +32,8 @@ An app where new/underground artists can upload their music without the algorith
     * - [X] Login / Stay Logged In
     * - [X] Logout
     * - [X] Create an account
-    * - [ ] Build bio 
+    * - [X] Build bio 
     * - [ ] Genre 
-    * - [ ] Birthdate 
-    * - [ ] Location
     * - [ ] Account info 
            * username 
            * email 
@@ -138,6 +136,10 @@ An app where new/underground artists can upload their music without the algorith
 
 ### [GIF] Sprint Plan 1
 <img src="http://g.recordit.co/KvncSVRtc5.gif" width=200>
+
+### [GIF] Sprint Plan 2
+<img src="http://g.recordit.co/ortX5a1AjM.gif" width=200>
+<img src="http://g.recordit.co/BOjXTUjXj1.gif" width=200>
 
 # Schema 
 ## Models

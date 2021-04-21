@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +17,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        if(GIDSignIn.sharedInstance()?.hasPreviousSignIn() == true) {
+            
+            let main = UIStoryboard(name: "Main", bundle: nil);
+            
+            self.window = UIWindow(windowScene: windowScene)
+            
+            //self.window?.rootViewController = storyboard.instantiateViewController(identifier: "HomePageView")
+            
+            let HomePageView = main.instantiateViewController(identifier: "HomePageView");
+            window?.rootViewController = HomePageView;
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -22,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     }
     
     var loggedInInfo = userInfo();
+    
+//    extension AppDelegate: GIDSignInDelegate {
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -39,8 +41,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         loggedInInfo.familyName = user.profile.familyName;
         loggedInInfo.email = user.profile.email;
         // ...
-        print("User: \(String(describing: loggedInInfo.fullName))")
+        print("User: \(String(describing: loggedInInfo.fullName))");
+        
+        NotificationCenter.default.post(name: .signInGoogleCompleted, object: nil)
     }
+//    }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations for when the user signs out of the app here
@@ -77,6 +82,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "184872027484-veuvrg7pn6kqpu3unrvcr7b0h38lh60o.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
 
         return true
     }
@@ -94,7 +101,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
-
-
 }
 
+extension Notification.Name {
+    
+    /// Notification when user successfully sign in using Google
+    static var signInGoogleCompleted: Notification.Name {
+        return .init(rawValue: #function)
+    }
+}

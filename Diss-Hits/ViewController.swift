@@ -10,8 +10,6 @@ import GoogleSignIn
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
-    
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -23,17 +21,40 @@ class ViewController: UIViewController {
 
         // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
-
-        // ...
+        
+        NotificationCenter.default.addObserver(self,
+                                                       selector: #selector(userDidSignInGoogle(_:)),
+                                                       name: .signInGoogleCompleted,
+                                                       object: nil)
+        
+        updateScreen()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         if(GIDSignIn.sharedInstance()?.hasPreviousSignIn() == true) {
-            let userInfo = self.appDelegate.getUserData()
-            label.text = "Hello, \(userInfo.fullName)";
+            self.performSegue(withIdentifier: "loginToHome", sender: self);
         }
     }
     
-    @IBAction func signOutButton(_ sender: AnyObject) {
-        GIDSignIn.sharedInstance()?.signOut()
-        label.text = "You've been signed out";
+    private func updateScreen() {
+            
+        if ((GIDSignIn.sharedInstance()?.currentUser) != nil) {
+            // User signed in
+            
+//            print("perhaps?")
+            
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
+                
+        } else {
+            // User signed out
+                
+            // print("Nothing happens")
+        }
     }
-
+    
+    @objc private func userDidSignInGoogle(_ notification: Notification) {
+        // Update screen after user successfully signed in
+        updateScreen()
+    }
+    
 }
