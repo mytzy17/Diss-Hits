@@ -61,7 +61,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-LO-SXe">
-                                <rect key="frame" x="167" y="314" width="56" height="30"/>
+                                <rect key="frame" x="171" y="446" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
@@ -82,17 +82,39 @@
                                     <action selector="searcher:" destination="jea-46-2OB" eventType="touchUpInside" id="fJR-4R-PnQ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwY-0d-5tY">
+                                <rect key="frame" x="263" y="446" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forward"/>
+                                <connections>
+                                    <action selector="forwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="ZgK-XR-Lhw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-W3-zmG">
+                                <rect key="frame" x="72" y="446" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Backward"/>
+                                <connections>
+                                    <action selector="backwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="59E-tE-DjX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp7-AN-llX">
+                                <rect key="frame" x="79" y="258" width="241" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KNZ-Uh-uXG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="Lp7-AN-llX" id="YWx-oj-FKC"/>
                         <outlet property="playButton" destination="cfJ-LO-SXe" id="BU6-78-LqU"/>
+                        <outlet property="searchField" destination="umO-xR-mKk" id="pAA-Md-fMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flj-df-tgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-675.38461538461536" y="716.5876777251184"/>
+            <point key="canvasLocation" x="-675.38461538461536" y="715.87677725118476"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="aFi-gH-Gbw">
