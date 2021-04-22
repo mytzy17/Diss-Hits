@@ -48,18 +48,6 @@ class MusicPlayerViewController: UIViewController {
         query.includeKeys(["artist", "lyrics", "songFile"])
         query.whereKey("songTitle", contains: input)
 
-//        query.getObjectInBackground(withId: input) { (songs, error) in
-//            if error == nil {
-//                // Success!
-////                print(songs!["lyrics"]!)
-//                self.queriedSongs.append(songs!["songFile"] as! PFFileObject)
-//                print(self.queriedSongs[0], "fancy for success")
-//            } else {
-//                // Fail!
-//                print(error!)
-//            }
-//        }
-//        var mysongs = [PFObject]()
         query.findObjectsInBackground() { (songs, error) in
             if error == nil {
                 // Success!
@@ -75,7 +63,7 @@ class MusicPlayerViewController: UIViewController {
                     }))
                 }
                 // need a cancel no matter what
-                activate.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil)) // probs wrong here
+                activate.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
                 
                 activate.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
                 self.present(activate, animated: true)
@@ -136,9 +124,13 @@ class MusicPlayerViewController: UIViewController {
             self.lastPlayed = player.currentTime
 //            player.stop()
             player.pause()
+            
+            playButton.setImage(UIImage(systemName: "pause"), for: UIControl.State.normal)
         }
         else if self.isInstantiated {
             player?.play()
+            
+            playButton.setImage(UIImage(systemName: "play"), for: UIControl.State.normal)
         }
         
         
@@ -160,6 +152,9 @@ class MusicPlayerViewController: UIViewController {
                 imageView.image = UIImage(data: try self.queriedAlbumCovers[self.currentSong].getData())
                 
                 self.isInstantiated = true
+                
+                playButton.setImage(UIImage(systemName: "play"), for: UIControl.State.normal)
+
             }
             catch {
                 print("made it to the catch!")

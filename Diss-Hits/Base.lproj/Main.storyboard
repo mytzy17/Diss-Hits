@@ -60,10 +60,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-LO-SXe">
-                                <rect key="frame" x="171" y="446" width="56" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-LO-SXe">
+                                <rect key="frame" x="175" y="450" width="49" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Play"/>
+                                <state key="normal" title="Play" image="play" catalog="system"/>
                                 <connections>
                                     <action selector="playMusic:" destination="jea-46-2OB" eventType="touchUpInside" id="REi-Z9-sY8"/>
                                 </connections>
@@ -82,18 +82,10 @@
                                     <action selector="searcher:" destination="jea-46-2OB" eventType="touchUpInside" id="fJR-4R-PnQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwY-0d-5tY">
-                                <rect key="frame" x="263" y="446" width="56" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-W3-zmG">
+                                <rect key="frame" x="79" y="450" width="71" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Forward"/>
-                                <connections>
-                                    <action selector="forwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="ZgK-XR-Lhw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-W3-zmG">
-                                <rect key="frame" x="72" y="446" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Backward"/>
+                                <state key="normal" title="Backward" image="backward" catalog="system"/>
                                 <connections>
                                     <action selector="backwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="59E-tE-DjX"/>
                                 </connections>
@@ -102,6 +94,14 @@
                                 <rect key="frame" x="79" y="258" width="241" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwY-0d-5tY">
+                                <rect key="frame" x="232" y="449" width="92" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forward" image="forward" catalog="system"/>
+                                <connections>
+                                    <action selector="forwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="ZgK-XR-Lhw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KNZ-Uh-uXG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -169,7 +169,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backward" catalog="system" width="128" height="79"/>
+        <image name="forward" catalog="system" width="128" height="79"/>
         <image name="logo2 copy" width="180" height="101"/>
+        <image name="play" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
