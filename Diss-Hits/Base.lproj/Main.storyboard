@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jea-46-2OB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Q5-bs-dy0">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -139,7 +139,7 @@
                             <outlet property="delegate" destination="6bW-zc-wEt" id="19w-mM-pXt"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="YU9-hD-Pg1"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="YU9-hD-Pg1"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="tHF-O2-ZoN">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="HCb-qT-i1k">
                             <connections>
@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="917" y="70"/>
         </scene>
-        <!--Item 2-->
+        <!--Songs-->
         <scene sceneID="Trb-M6-8xB">
             <objects>
                 <viewController id="gbB-eB-SdG" sceneMemberID="viewController">
@@ -162,13 +162,13 @@
                         <viewLayoutGuide key="safeArea" id="0X3-pN-3uu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="QID-Po-Fxy"/>
+                    <tabBarItem key="tabBarItem" title="Songs" id="QID-Po-Fxy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeU-uj-luT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1665" y="70"/>
         </scene>
-        <!--Item 1-->
+        <!--Playlists-->
         <scene sceneID="3Zw-lK-L6x">
             <objects>
                 <viewController id="vOh-rH-6uy" sceneMemberID="viewController">
@@ -178,7 +178,7 @@
                         <viewLayoutGuide key="safeArea" id="RbY-a2-NhV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="TbQ-8l-Qii"/>
+                    <tabBarItem key="tabBarItem" title="Playlists" id="TbQ-8l-Qii"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNN-dQ-01e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -192,11 +192,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vOh-rH-6uy" kind="relationship" relationship="viewControllers" id="7ng-xj-voF"/>
-                        <segue destination="gbB-eB-SdG" kind="relationship" relationship="viewControllers" id="jgP-xu-QAs"/>
                         <segue destination="6bW-zc-wEt" kind="relationship" relationship="viewControllers" id="hq1-t8-3ud"/>
+                        <segue destination="gbB-eB-SdG" kind="relationship" relationship="viewControllers" id="jgP-xu-QAs"/>
+                        <segue destination="vOh-rH-6uy" kind="relationship" relationship="viewControllers" id="7ng-xj-voF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgU-EV-46E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
