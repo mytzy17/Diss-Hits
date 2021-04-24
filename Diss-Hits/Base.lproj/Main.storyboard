@@ -152,37 +152,57 @@
             </objects>
             <point key="canvasLocation" x="917" y="70"/>
         </scene>
-        <!--Songs-->
+        <!--Artist Songs-->
         <scene sceneID="Trb-M6-8xB">
             <objects>
-                <viewController id="gbB-eB-SdG" sceneMemberID="viewController">
+                <viewController id="gbB-eB-SdG" customClass="ArtistSongsViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RAs-CB-9eb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMz-c7-FNE">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="0X3-pN-3uu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Songs" id="QID-Po-Fxy"/>
+                    <navigationItem key="navigationItem" title="Artist Songs" id="1Bq-ME-3Gv"/>
+                    <connections>
+                        <outlet property="songView" destination="HMz-c7-FNE" id="Gya-ze-yw4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeU-uj-luT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="70"/>
+            <point key="canvasLocation" x="1621.5384615384614" y="757.81990521327009"/>
         </scene>
-        <!--Playlists-->
+        <!--Artist Playlists-->
         <scene sceneID="3Zw-lK-L6x">
             <objects>
-                <viewController id="vOh-rH-6uy" sceneMemberID="viewController">
+                <viewController id="vOh-rH-6uy" customClass="ArtistPlaylistsViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KjY-0a-lLb">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ju2-kl-8Xb">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="RbY-a2-NhV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Playlists" id="TbQ-8l-Qii"/>
+                    <navigationItem key="navigationItem" title="Artist Playlists" id="E5v-zR-lr7"/>
+                    <connections>
+                        <outlet property="playlistView" destination="Ju2-kl-8Xb" id="6j9-3z-XCI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNN-dQ-01e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2391" y="70"/>
+            <point key="canvasLocation" x="2344.6153846153848" y="757.81990521327009"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bxx-De-6ZH">
@@ -197,13 +217,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="6bW-zc-wEt" kind="relationship" relationship="viewControllers" id="hq1-t8-3ud"/>
-                        <segue destination="gbB-eB-SdG" kind="relationship" relationship="viewControllers" id="jgP-xu-QAs"/>
-                        <segue destination="vOh-rH-6uy" kind="relationship" relationship="viewControllers" id="7ng-xj-voF"/>
+                        <segue destination="6sh-Ni-qZh" kind="relationship" relationship="viewControllers" id="jgP-xu-QAs"/>
+                        <segue destination="3em-Ir-yFT" kind="relationship" relationship="viewControllers" id="7ng-xj-voF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgU-EV-46E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="-712"/>
+            <point key="canvasLocation" x="1622" y="-711"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="31l-Hj-OAw">
@@ -220,6 +240,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Dz-sz-IWt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137" y="71"/>
+        </scene>
+        <!--Songs-->
+        <scene sceneID="r8v-Hv-OOv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6sh-Ni-qZh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Songs" id="QID-Po-Fxy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PhC-aU-8zH">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gbB-eB-SdG" kind="relationship" relationship="rootViewController" id="TCP-jf-6xe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NMc-Vv-txF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1622" y="70"/>
+        </scene>
+        <!--Playlists-->
+        <scene sceneID="2x2-0v-05k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3em-Ir-yFT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Playlists" id="TbQ-8l-Qii"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oF8-Hg-etI">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="MuktaMahee-Bold" family="Mukta Mahee" pointSize="20"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vOh-rH-6uy" kind="relationship" relationship="rootViewController" id="3d3-I9-cfO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fy4-Rl-kEM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="70"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
