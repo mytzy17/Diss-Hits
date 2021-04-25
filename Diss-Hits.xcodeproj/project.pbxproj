@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		47EEBBA1504638CBCBF4B213 /* Pods_Diss_Hits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */; };
 		6A8927082628FC36002BCDD0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */; };
+		B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88031EC262635120031C869 /* MusicPlayerViewController.swift */; };
+		B88031F0262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */; };
 		CF88C79F261D2DEA00C479B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88C79E261D2DEA00C479B2 /* AppDelegate.swift */; };
 		CF88C7A1261D2DEA00C479B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88C7A0261D2DEA00C479B2 /* SceneDelegate.swift */; };
 		CF88C7A3261D2DEA00C479B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88C7A2261D2DEA00C479B2 /* ViewController.swift */; };
@@ -21,6 +23,8 @@
 		3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diss_Hits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51E522DA6473670EAD4B8BF3 /* Pods-Diss-Hits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diss-Hits.release.xcconfig"; path = "Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits.release.xcconfig"; sourceTree = "<group>"; };
 		6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		B88031EC262635120031C869 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lobo Loco - Comming Back - Instrumental (ID 1355).mp3"; sourceTree = "<group>"; };
 		CF88C79B261D2DEA00C479B2 /* Diss-Hits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diss-Hits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF88C79E261D2DEA00C479B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF88C7A0261D2DEA00C479B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,7 @@
 		CF88C79D261D2DEA00C479B2 /* Diss-Hits */ = {
 			isa = PBXGroup;
 			children = (
+				B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */,
 				CF88C79E261D2DEA00C479B2 /* AppDelegate.swift */,
 				CF88C7A0261D2DEA00C479B2 /* SceneDelegate.swift */,
 				CF88C7A2261D2DEA00C479B2 /* ViewController.swift */,
@@ -82,6 +87,7 @@
 				CF88C7A7261D2DEA00C479B2 /* Assets.xcassets */,
 				CF88C7A9261D2DEA00C479B2 /* LaunchScreen.storyboard */,
 				CF88C7AC261D2DEA00C479B2 /* Info.plist */,
+				B88031EC262635120031C869 /* MusicPlayerViewController.swift */,
 			);
 			path = "Diss-Hits";
 			sourceTree = "<group>";
@@ -157,6 +163,7 @@
 				CF88C7AB261D2DEA00C479B2 /* LaunchScreen.storyboard in Resources */,
 				CF88C7A8261D2DEA00C479B2 /* Assets.xcassets in Resources */,
 				CF88C7A6261D2DEA00C479B2 /* Main.storyboard in Resources */,
+				B88031F0262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +237,7 @@
 				CF88C7A3261D2DEA00C479B2 /* ViewController.swift in Sources */,
 				CF88C79F261D2DEA00C479B2 /* AppDelegate.swift in Sources */,
 				CF88C7A1261D2DEA00C479B2 /* SceneDelegate.swift in Sources */,
+				B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

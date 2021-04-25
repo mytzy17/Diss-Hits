@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jea-46-2OB">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,7 @@
         <!--LoginView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginView" title="LoginView" id="BYZ-38-t0r" customClass="ViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,7 +37,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="label" destination="y0h-Ms-S2M" id="rsL-cQ-js5"/>
                         <outlet property="signInButton" destination="gHO-IJ-YQ4" id="z12-jV-wBT"/>
                         <segue destination="LKB-8G-VKV" kind="presentation" identifier="loginToHome" id="djG-Bd-zhf"/>
                     </connections>
@@ -45,6 +44,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-654" y="70"/>
+        </scene>
+        <!--Music Player View Controller-->
+        <scene sceneID="kuA-CZ-Vgb">
+            <objects>
+                <viewController id="jea-46-2OB" customClass="MusicPlayerViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3BJ-bf-e7E">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="music player pls?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-8b-WUF">
+                                <rect key="frame" x="130" y="229" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-LO-SXe">
+                                <rect key="frame" x="175" y="450" width="49" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play" image="play" catalog="system"/>
+                                <connections>
+                                    <action selector="playMusic:" destination="jea-46-2OB" eventType="touchUpInside" id="REi-Z9-sY8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Here song" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umO-xR-mKk">
+                                <rect key="frame" x="147" y="145" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ka4-NL-yD3">
+                                <rect key="frame" x="252" y="149" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searcher:" destination="jea-46-2OB" eventType="touchUpInside" id="fJR-4R-PnQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-W3-zmG">
+                                <rect key="frame" x="79" y="450" width="71" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Backward" image="backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="59E-tE-DjX"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp7-AN-llX">
+                                <rect key="frame" x="79" y="258" width="241" height="164"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwY-0d-5tY">
+                                <rect key="frame" x="232" y="449" width="92" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Forward" image="forward" catalog="system"/>
+                                <connections>
+                                    <action selector="forwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="ZgK-XR-Lhw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KNZ-Uh-uXG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Lp7-AN-llX" id="YWx-oj-FKC"/>
+                        <outlet property="playButton" destination="cfJ-LO-SXe" id="BU6-78-LqU"/>
+                        <outlet property="searchField" destination="umO-xR-mKk" id="pAA-Md-fMM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="flj-df-tgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-675.38461538461536" y="715.87677725118476"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="aFi-gH-Gbw">
@@ -69,6 +139,7 @@
                             <outlet property="delegate" destination="6bW-zc-wEt" id="19w-mM-pXt"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="YU9-hD-Pg1"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="tHF-O2-ZoN">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="HCb-qT-i1k">
                             <connections>
@@ -79,12 +150,63 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBx-4Y-L4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="63"/>
+            <point key="canvasLocation" x="917" y="70"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="Trb-M6-8xB">
+            <objects>
+                <viewController id="gbB-eB-SdG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RAs-CB-9eb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0X3-pN-3uu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="QID-Po-Fxy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JeU-uj-luT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="70"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="3Zw-lK-L6x">
+            <objects>
+                <viewController id="vOh-rH-6uy" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjY-0a-lLb">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RbY-a2-NhV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="TbQ-8l-Qii"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNN-dQ-01e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2391" y="70"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Bxx-De-6ZH">
+            <objects>
+                <tabBarController id="2Q5-bs-dy0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qfl-nS-lhl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vOh-rH-6uy" kind="relationship" relationship="viewControllers" id="7ng-xj-voF"/>
+                        <segue destination="gbB-eB-SdG" kind="relationship" relationship="viewControllers" id="jgP-xu-QAs"/>
+                        <segue destination="6bW-zc-wEt" kind="relationship" relationship="viewControllers" id="hq1-t8-3ud"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgU-EV-46E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1665" y="-712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="31l-Hj-OAw">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="LKB-8G-VKV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="HomePageView" modalPresentationStyle="fullScreen" id="LKB-8G-VKV" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y9K-vv-jf6">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -98,8 +220,14 @@
             <point key="canvasLocation" x="137" y="71"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hq1-t8-3ud"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="backward" catalog="system" width="128" height="79"/>
+        <image name="forward" catalog="system" width="128" height="79"/>
         <image name="logo2 copy" width="180" height="101"/>
+        <image name="play" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

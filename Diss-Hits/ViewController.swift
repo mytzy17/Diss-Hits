@@ -22,9 +22,12 @@ class ViewController: UIViewController {
         // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         
+        NotificationCenter.default.addObserver(self,
+                                                       selector: #selector(userDidSignInGoogle(_:)),
+                                                       name: .signInGoogleCompleted,
+                                                       object: nil)
         
-
-        // ...
+        updateScreen()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,4 +35,26 @@ class ViewController: UIViewController {
             self.performSegue(withIdentifier: "loginToHome", sender: self);
         }
     }
+    
+    private func updateScreen() {
+            
+        if ((GIDSignIn.sharedInstance()?.currentUser) != nil) {
+            // User signed in
+            
+//            print("perhaps?")
+            
+            self.performSegue(withIdentifier: "loginToHome", sender: self)
+                
+        } else {
+            // User signed out
+                
+            // print("Nothing happens")
+        }
+    }
+    
+    @objc private func userDidSignInGoogle(_ notification: Notification) {
+        // Update screen after user successfully signed in
+        updateScreen()
+    }
+    
 }

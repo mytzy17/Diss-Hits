@@ -10,12 +10,12 @@ import GoogleSignIn
 
 class HomeTableViewController: UITableViewController {
     
-    @IBAction func clickLogout(_ sender: Any) {/*
+    @IBAction func clickLogout(_ sender: Any) {
         let main = UIStoryboard(name: "Main", bundle: nil);
         let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate;
         let loginView = main.instantiateViewController(identifier: "LoginView");
         GIDSignIn.sharedInstance()?.signOut();
-        delegate.window?.rootViewController = loginView;*/
+        delegate.window?.rootViewController = loginView;
     }
     override func viewDidLoad() {
         super.viewDidLoad()
