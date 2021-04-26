@@ -57,17 +57,31 @@ class ViewController: UIViewController {
             }
              */
        
-            query.countObjectsInBackground() { (count: Int32, error: Error?)
+            query.findObjectsInBackground { (results: [PFObject]?, error: Error?)
                 in
                 if let error = error {
                     //could not find user
                     print(error.localizedDescription);
                 } else {
                     //find succeeded
-                    if(count == 0) {
+                    if(results == nil) {
                         self.performSegue(withIdentifier: "RegisterSegue", sender: self);
-                    } else {
-                        self.performSegue(withIdentifier: "loginToHome", sender: self);
+                    } else if let username = results![0]["username"]{
+                        
+                        print(username)
+                        let password = userData.userId
+                        
+                        PFUser.logInWithUsername(inBackground: username as! String, password: password) {
+                          (user, error) in
+                          if user != nil {
+                            self.performSegue(withIdentifier: "loginToHome", sender: self);
+                //            print(username)
+                          }
+                          else {
+                            print("Error: \(error?.localizedDescription)")
+                          }
+                        }
+                        
                     }
                 }
             }
