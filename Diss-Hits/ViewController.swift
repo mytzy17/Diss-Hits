@@ -64,11 +64,15 @@ class ViewController: UIViewController {
                     print(error.localizedDescription);
                 } else {
                     //find succeeded
-                    if(results == nil) {
+                    if(results == nil || results?.isEmpty == true) {
                         self.performSegue(withIdentifier: "RegisterSegue", sender: self);
-                    } else if let username = results![0]["username"]{
+                    } else if let results = results {
                         
-                        print(username)
+                        print(results)
+                        
+                        let username = results[0]["username"]
+                        
+                        print(username!)
                         let password = userData.userId
                         
                         PFUser.logInWithUsername(inBackground: username as! String, password: password) {
