@@ -311,6 +311,19 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97T-jv-HRy">
+                                <rect key="frame" x="180" y="225" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JaU-L3-mvf">
+                                <rect key="frame" x="292" y="225" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <segue destination="7I6-tf-cJs" kind="show" id="T7M-D9-FPT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pj9-0u-5EW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -326,6 +339,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1z-RW-u5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2113.8461538461538" y="2432.7014218009476"/>
+        </scene>
+        <!--Upload Song-->
+        <scene sceneID="IGP-78-1Ha">
+            <objects>
+                <viewController id="7I6-tf-cJs" customClass="UploadSongViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ux8-Ag-VRN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kT-yC-cFC">
+                                <rect key="frame" x="151" y="366" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Upload Song"/>
+                                <connections>
+                                    <action selector="selectSongs:" destination="7I6-tf-cJs" eventType="touchUpInside" id="lZm-qd-bpg"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lyrics" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NqO-e8-KsN">
+                                <rect key="frame" x="70" y="558" width="250" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Song TItle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QYl-21-aI5">
+                                <rect key="frame" x="147" y="465" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbI-Pq-jeq">
+                                <rect key="frame" x="171" y="658" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_transparent_120x120" translatesAutoresizingMaskIntoConstraints="NO" id="Ucs-Rl-vRc">
+                                <rect key="frame" x="95" y="131" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UJv-Wj-TKF" appends="YES" id="GqG-TW-onl"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NpD-Xs-aja"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Upload Song" id="zuc-46-eNa"/>
+                    <connections>
+                        <outlet property="imageView" destination="Ucs-Rl-vRc" id="N3l-5c-kBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ft4-y5-xeP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UJv-Wj-TKF">
+                    <connections>
+                        <action selector="onCameraButton:" destination="7I6-tf-cJs" id="ezb-ih-g5e"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="3216.9230769230767" y="2432.7014218009476"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bxx-De-6ZH">
@@ -411,6 +483,7 @@
         <image name="forward" catalog="system" width="128" height="79"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="logo2 copy" width="180" height="101"/>
+        <image name="logo_transparent_120x120" width="120" height="120"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="play" catalog="system" width="120" height="128"/>

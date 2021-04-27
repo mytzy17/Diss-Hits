@@ -8,6 +8,7 @@
 import UIKit
 import Parse
 import GoogleSignIn
+import SwiftUI
 
 class UserDetailsViewController: UIViewController {
 
