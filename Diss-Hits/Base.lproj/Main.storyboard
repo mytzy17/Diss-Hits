@@ -224,13 +224,7 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="YU9-hD-Pg1"/>
-                    <navigationItem key="navigationItem" title="Home" id="tHF-O2-ZoN">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="HCb-qT-i1k">
-                            <connections>
-                                <action selector="clickLogout:" destination="6bW-zc-wEt" id="w0k-vr-mrY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Home" id="tHF-O2-ZoN"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EBx-4Y-L4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +273,7 @@
         <!--User Profile-->
         <scene sceneID="BFX-qj-zwz">
             <objects>
-                <viewController id="vFQ-7T-B8f" sceneMemberID="viewController">
+                <viewController id="vFQ-7T-B8f" customClass="UserDetailsViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkV-w0-Z20">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,7 +315,13 @@
                         <viewLayoutGuide key="safeArea" id="pj9-0u-5EW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="User Profile" id="lfh-xS-mXS"/>
+                    <navigationItem key="navigationItem" title="User Profile" id="lfh-xS-mXS">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="9M4-1y-F0E">
+                            <connections>
+                                <action selector="logoutButton:" destination="vFQ-7T-B8f" id="Er4-Ud-HKX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1z-RW-u5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

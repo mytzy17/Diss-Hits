@@ -10,6 +10,7 @@
 		47EEBBA1504638CBCBF4B213 /* Pods_Diss_Hits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */; };
 		6A7F84C2262E71400021ED09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7F84C1262E71400021ED09 /* RegisterViewController.swift */; };
 		6A8927082628FC36002BCDD0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */; };
+		7F6515F02637A5CE007A098D /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */; };
 		B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88031EC262635120031C869 /* MusicPlayerViewController.swift */; };
 		B88031F0262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */; };
 		CF88C79F261D2DEA00C479B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF88C79E261D2DEA00C479B2 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 		51E522DA6473670EAD4B8BF3 /* Pods-Diss-Hits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diss-Hits.release.xcconfig"; path = "Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits.release.xcconfig"; sourceTree = "<group>"; };
 		6A7F84C1262E71400021ED09 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
 		B88031EC262635120031C869 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lobo Loco - Comming Back - Instrumental (ID 1355).mp3"; sourceTree = "<group>"; };
 		CF88C79B261D2DEA00C479B2 /* Diss-Hits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diss-Hits.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +93,7 @@
 				CF88C7AC261D2DEA00C479B2 /* Info.plist */,
 				6A7F84C1262E71400021ED09 /* RegisterViewController.swift */,
 				B88031EC262635120031C869 /* MusicPlayerViewController.swift */,
+				7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */,
 			);
 			path = "Diss-Hits";
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				6A7F84C2262E71400021ED09 /* RegisterViewController.swift in Sources */,
 				CF88C7A3261D2DEA00C479B2 /* ViewController.swift in Sources */,
 				CF88C79F261D2DEA00C479B2 /* AppDelegate.swift in Sources */,
+				7F6515F02637A5CE007A098D /* UserDetailsViewController.swift in Sources */,
 				CF88C7A1261D2DEA00C479B2 /* SceneDelegate.swift in Sources */,
 				B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */,
 			);
