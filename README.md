@@ -143,6 +143,7 @@ An app where new/underground artists can upload their music without the algorith
 
 ### [GIF] Sprint Plan 3
 <img src="http://g.recordit.co/0j3dfA5ZAO.gif" width=200>
+<img src="https://media0.giphy.com/media/nZ2J1ZWiTcCywhDJCT/giphy.gif" width=200>
 
 # Schema 
 ## Models
