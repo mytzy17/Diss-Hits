@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		387948ED2633E83B002CFCFC /* ArtistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387948EC2633E83B002CFCFC /* ArtistSongsViewController.swift */; };
 		387948F02633E85F002CFCFC /* ArtistPlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387948EF2633E85F002CFCFC /* ArtistPlaylistsViewController.swift */; };
+		388328552638F27000160D59 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328542638F27000160D59 /* SongListViewController.swift */; };
+		388328582638F63100160D59 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328572638F63100160D59 /* SongCell.swift */; };
 		47EEBBA1504638CBCBF4B213 /* Pods_Diss_Hits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */; };
 		6A8927082628FC36002BCDD0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */; };
 		B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88031EC262635120031C869 /* MusicPlayerViewController.swift */; };
@@ -25,6 +27,8 @@
 		3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diss_Hits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		387948EC2633E83B002CFCFC /* ArtistSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSongsViewController.swift; sourceTree = "<group>"; };
 		387948EF2633E85F002CFCFC /* ArtistPlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistPlaylistsViewController.swift; sourceTree = "<group>"; };
+		388328542638F27000160D59 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
+		388328572638F63100160D59 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
 		51E522DA6473670EAD4B8BF3 /* Pods-Diss-Hits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diss-Hits.release.xcconfig"; path = "Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits.release.xcconfig"; sourceTree = "<group>"; };
 		6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		B88031EC262635120031C869 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				B88031EC262635120031C869 /* MusicPlayerViewController.swift */,
 				387948EC2633E83B002CFCFC /* ArtistSongsViewController.swift */,
 				387948EF2633E85F002CFCFC /* ArtistPlaylistsViewController.swift */,
+				388328542638F27000160D59 /* SongListViewController.swift */,
+				388328572638F63100160D59 /* SongCell.swift */,
 			);
 			path = "Diss-Hits";
 			sourceTree = "<group>";
@@ -240,11 +246,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				387948F02633E85F002CFCFC /* ArtistPlaylistsViewController.swift in Sources */,
+				388328552638F27000160D59 /* SongListViewController.swift in Sources */,
 				6A8927082628FC36002BCDD0 /* HomeTableViewController.swift in Sources */,
 				CF88C7A3261D2DEA00C479B2 /* ViewController.swift in Sources */,
 				CF88C79F261D2DEA00C479B2 /* AppDelegate.swift in Sources */,
 				CF88C7A1261D2DEA00C479B2 /* SceneDelegate.swift in Sources */,
 				387948ED2633E83B002CFCFC /* ArtistSongsViewController.swift in Sources */,
+				388328582638F63100160D59 /* SongCell.swift in Sources */,
 				B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
