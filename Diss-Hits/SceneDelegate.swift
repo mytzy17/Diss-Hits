@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleSignIn
+import Parse
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -21,14 +22,24 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if(GIDSignIn.sharedInstance()?.hasPreviousSignIn() == true) {
             
-            let main = UIStoryboard(name: "Main", bundle: nil);
+            if PFUser.current() != nil{
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let homePageView = main.instantiateViewController(withIdentifier: "HomePageView")
+                    
+                window?.rootViewController = homePageView
+            }else{
+                GIDSignIn.sharedInstance()?.signOut();
+            }
             
-            self.window = UIWindow(windowScene: windowScene)
             
-            //self.window?.rootViewController = storyboard.instantiateViewController(identifier: "HomePageView")
-            
-            let HomePageView = main.instantiateViewController(identifier: "HomePageView");
-            window?.rootViewController = HomePageView;
+//            let main = UIStoryboard(name: "Main", bundle: nil);
+//
+//            self.window = UIWindow(windowScene: windowScene)
+//
+//            //self.window?.rootViewController = storyboard.instantiateViewController(identifier: "HomePageView")
+//
+//            let HomePageView = main.instantiateViewController(identifier: "HomePageView");
+//            window?.rootViewController = HomePageView;
         }
     }
 
