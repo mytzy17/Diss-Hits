@@ -167,7 +167,7 @@
                                     <action selector="playMusic:" destination="jea-46-2OB" eventType="touchUpInside" id="REi-Z9-sY8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Here song" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umO-xR-mKk">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Here song" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umO-xR-mKk">
                                 <rect key="frame" x="147" y="145" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -443,7 +443,6 @@
         <!--Search-->
         <scene sceneID="Qie-gk-3jZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TpO-o8-xSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h2p-fX-v2P" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="QID-Po-Fxy"/>
                     <toolbarItems/>
@@ -456,6 +455,7 @@
                         <segue destination="jea-46-2OB" kind="relationship" relationship="rootViewController" id="sM2-zg-LjZ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TpO-o8-xSt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1204.6153846153845" y="851.65876777251185"/>
         </scene>
@@ -480,7 +480,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dOR-48-4hn"/>
+        <segue reference="hTa-Cg-TJW"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backward" catalog="system" width="128" height="79"/>
