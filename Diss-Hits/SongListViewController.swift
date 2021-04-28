@@ -8,10 +8,13 @@
 import UIKit
 import AVFoundation
 import Parse
+import AlamofireImage
 
 class SongListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var songListView: UITableView!
+    
+    var songs = [PFObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,16 +26,41 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        let query = PFQuery(className: "Songs")
+        query.includeKey("songTitle")
+        query.limit = 20
+        
+        query.findObjectsInBackground { (songs, error) in
+            if songs != nil {
+                self.songs = songs!
+                self.songListView.reloadData()
+            }
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return songs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
-            
-        cell.songLabel.text = "Song name #\(indexPath.row)"
-        cell.artistLabel.text = "Artist #\(indexPath.row)"
+        let song = songs[indexPath.row]
+        
+        let title = song["songTitle"] as! String
+        cell.songLabel.text = title
+        
+//        let artist = song["artist"] as! PFUser
+//        cell.artistLabel.text = artist.email
+        
+//        let imageFile = song["albumCover"] as! PFFileObject
+//        let urlString = imageFile.url!
+//        let url = URL(string: urlString)
+        
+//        cell.photoLabel.
         
         return cell
     }
