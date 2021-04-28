@@ -2,7 +2,7 @@
 //  ArtistSongsViewController.swift
 //  Diss-Hits
 //
-//  Created by Jennifer Lopez on 4/23/21.
+//  Created by Jennifer Lopez on 4/27/21.
 //
 
 import UIKit
@@ -15,20 +15,18 @@ class ArtistSongsViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         songView.dataSource = self
         songView.delegate = self
-        
+
         // Do any additional setup after loading the view.
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // return num of rows, song.count
         return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // for each row, give me cell
         let cell = UITableViewCell()
         
         cell.textLabel?.text = "song # \(indexPath.row)"

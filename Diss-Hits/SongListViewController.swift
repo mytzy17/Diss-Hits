@@ -21,7 +21,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         songListView.dataSource = self
         songListView.delegate = self
-        print("hello ***")
+        print("song list ***")
 
         // Do any additional setup after loading the view.
     }

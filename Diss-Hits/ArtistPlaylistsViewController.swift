@@ -2,7 +2,7 @@
 //  ArtistPlaylistsViewController.swift
 //  Diss-Hits
 //
-//  Created by Jennifer Lopez on 4/23/21.
+//  Created by Jennifer Lopez on 4/27/21.
 //
 
 import UIKit
@@ -27,14 +27,12 @@ class ArtistPlaylistsViewController: UIViewController, UITableViewDataSource, UI
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // for each row, give me cell
         let cell = UITableViewCell()
         
         cell.textLabel?.text = "playlist #\(indexPath.row)"
         
         return cell
     }
-
     
 
     /*
