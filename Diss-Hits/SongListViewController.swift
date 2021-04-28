@@ -62,6 +62,8 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         
 //        cell.photoLabel.
         
+//        print(song["albumCover"])
+        
         return cell
     }
 
