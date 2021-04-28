@@ -216,14 +216,13 @@
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="6bW-zc-wEt" kind="relationship" relationship="viewControllers" id="hq1-t8-3ud"/>
                         <segue destination="6sh-Ni-qZh" kind="relationship" relationship="viewControllers" id="jgP-xu-QAs"/>
                         <segue destination="3em-Ir-yFT" kind="relationship" relationship="viewControllers" id="7ng-xj-voF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KgU-EV-46E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="-711"/>
+            <point key="canvasLocation" x="2003" y="-719"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="31l-Hj-OAw">
@@ -286,9 +285,6 @@
             <point key="canvasLocation" x="2346" y="70"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hq1-t8-3ud"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="backward" catalog="system" width="128" height="79"/>
         <image name="forward" catalog="system" width="128" height="79"/>
