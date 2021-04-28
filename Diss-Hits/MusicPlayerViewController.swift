@@ -4,7 +4,6 @@
 //
 //  Created by Josue Quintero on 4/13/21.
 //
-
 import UIKit
 import AVFoundation
 import Parse
@@ -48,12 +47,17 @@ class MusicPlayerViewController: UIViewController {
         query.includeKeys(["artist", "lyrics", "songFile"])
         query.whereKey("songTitle", contains: input)
 
+        let activate = UIAlertController(title: "This is what is available:", message: nil, preferredStyle: .actionSheet)
+        
+        //query for genre
+        let queryByGenre = PFQuery(className: "Songs")
+        queryByGenre.includeKeys(["artist", "lyrics", "songFile"])
+        queryByGenre.whereKey("genre", contains: input)
+        
         query.findObjectsInBackground() { (songs, error) in
             if error == nil {
                 // Success!
                 print(songs!)
-            
-                let activate = UIAlertController(title: "This is what is available:", message: nil, preferredStyle: .actionSheet)
                 
                 for song in songs!{
                     activate.addAction(UIAlertAction(title: song["songTitle"] as? String, style: .default, handler:{ action in
@@ -62,18 +66,35 @@ class MusicPlayerViewController: UIViewController {
                         self.queriedAlbumCovers.append(song["albumCover"] as! PFFileObject)
                     }))
                 }
-                // need a cancel no matter what
-                activate.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
-                
-                activate.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
-                self.present(activate, animated: true)
             
             }
             else {
                 print([error])
             }
         }
-                
+        
+        queryByGenre.findObjectsInBackground() { (songs, error) in
+            if error == nil {
+                // Success!
+                print(songs!)
+            
+                for song in songs!{
+                    activate.addAction(UIAlertAction(title: song["songTitle"] as? String, style: .default, handler:{ action in
+                        print(song["songTitle"]!)
+                        self.queriedSongs.append(song["songFile"] as! PFFileObject)
+                        self.queriedAlbumCovers.append(song["albumCover"] as! PFFileObject)
+                    }))
+                }
+            }
+            else {
+                print([error])
+            }
+        }
+        
+        activate.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        activate.popoverPresentationController?.barButtonItem = self.navigationItem.rightBarButtonItem
+        self.present(activate, animated: true)
         
     }
     
@@ -165,7 +186,6 @@ class MusicPlayerViewController: UIViewController {
     /*
     // MARK: - Navigation
      
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
