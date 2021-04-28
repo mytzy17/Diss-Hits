@@ -52,7 +52,7 @@ An app where new/underground artists can upload their music without the algorith
 
 * **search bar**  
     * - [ ] search by genre 
-    * - [ ] search by title 
+    * - [X] search by title 
     * - [ ] search by artist name 
     * - [ ] search by lyrics 
     * - [ ] search by instrument
@@ -140,6 +140,10 @@ An app where new/underground artists can upload their music without the algorith
 ### [GIF] Sprint Plan 2
 <img src="http://g.recordit.co/ortX5a1AjM.gif" width=200>
 <img src="http://g.recordit.co/BOjXTUjXj1.gif" width=200>
+
+### [GIF] Sprint Plan 3
+<img src="http://g.recordit.co/0j3dfA5ZAO.gif" width=200>
+<img src="https://media0.giphy.com/media/nZ2J1ZWiTcCywhDJCT/giphy.gif" width=200>
 
 # Schema 
 ## Models

@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import GoogleSignIn
 
 class RegisterViewController: ViewController {
 
@@ -56,6 +57,14 @@ class RegisterViewController: ViewController {
         
     }
     
+    @IBAction func cancelRegister(_ sender: Any) {
+        let main = UIStoryboard(name: "Main", bundle: nil);
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate;
+        let loginView = main.instantiateViewController(identifier: "LoginView");
+        GIDSignIn.sharedInstance()?.signOut();
+
+        delegate.window?.rootViewController = loginView;
+    }
     /*
     // MARK: - Navigation
 
