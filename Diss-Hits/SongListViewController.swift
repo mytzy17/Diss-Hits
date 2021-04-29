@@ -30,7 +30,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidAppear(true)
         
         let query = PFQuery(className: "Songs")
-        query.includeKey("songTitle")
+        query.includeKeys(["songTitle", "author"])
         query.limit = 20
         
         query.findObjectsInBackground { (songs, error) in
@@ -53,8 +53,12 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         let title = song["songTitle"] as! String
         cell.songLabel.text = title
         
-//        let artist = song["artist"] as! PFUser
-//        cell.artistLabel.text = artist.email
+        let artist = song["artist"] as! PFUser
+//            print(artist)
+            
+//            cell.artistLabel.text = artist.username
+        
+        
         
 //        let imageFile = song["albumCover"] as! PFFileObject
 //        let urlString = imageFile.url!
@@ -63,6 +67,19 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
 //        cell.photoLabel.
         
 //        print(song["albumCover"])
+        
+        if let imageFile = song["albumCover"] as? PFFileObject {
+            
+//            print(imageFile)
+            
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.photoLabel.af.setImage(withURL: url)
+        }
+        
+//        print(song)
+        
         
         return cell
     }
