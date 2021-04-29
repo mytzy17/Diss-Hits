@@ -144,7 +144,7 @@
             </objects>
             <point key="canvasLocation" x="208" y="70"/>
         </scene>
-        <!--Music Player View Controller-->
+        <!--Music Player-->
         <scene sceneID="kuA-CZ-Vgb">
             <objects>
                 <viewController id="jea-46-2OB" customClass="MusicPlayerViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,15 +152,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="music player pls?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-8b-WUF">
-                                <rect key="frame" x="130" y="229" width="131" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfJ-LO-SXe">
-                                <rect key="frame" x="175" y="450" width="49" height="22"/>
+                                <rect key="frame" x="183" y="499" width="25" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play" image="play" catalog="system"/>
                                 <connections>
@@ -168,13 +161,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Here song" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="umO-xR-mKk">
-                                <rect key="frame" x="147" y="145" width="97" height="34"/>
+                                <rect key="frame" x="108" y="615" width="173" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ka4-NL-yD3">
-                                <rect key="frame" x="252" y="149" width="48" height="30"/>
+                                <rect key="frame" x="289" y="619" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
@@ -182,7 +175,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ik-W3-zmG">
-                                <rect key="frame" x="79" y="450" width="71" height="22"/>
+                                <rect key="frame" x="99" y="499" width="60" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Backward" image="backward" catalog="system"/>
                                 <connections>
@@ -190,31 +183,39 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lp7-AN-llX">
-                                <rect key="frame" x="79" y="258" width="241" height="164"/>
+                                <rect key="frame" x="53" y="258" width="283" height="217"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwY-0d-5tY">
-                                <rect key="frame" x="232" y="449" width="92" height="22"/>
+                                <rect key="frame" x="252" y="498" width="68" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Forward" image="forward" catalog="system"/>
                                 <connections>
                                     <action selector="forwardSong:" destination="jea-46-2OB" eventType="touchUpInside" id="ZgK-XR-Lhw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't forget to hit play!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNF-8b-WUF">
+                                <rect key="frame" x="95" y="204" width="200" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KNZ-Uh-uXG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="X9D-7H-pkp"/>
+                    <navigationItem key="navigationItem" title="Music Player" id="kPj-Zp-cq2"/>
                     <connections>
                         <outlet property="imageView" destination="Lp7-AN-llX" id="YWx-oj-FKC"/>
+                        <outlet property="labelText" destination="fNF-8b-WUF" id="g01-Ri-Sbh"/>
                         <outlet property="playButton" destination="cfJ-LO-SXe" id="BU6-78-LqU"/>
                         <outlet property="searchField" destination="umO-xR-mKk" id="pAA-Md-fMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flj-df-tgE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205" y="1682"/>
+            <point key="canvasLocation" x="1204.6153846153845" y="1681.9905213270142"/>
         </scene>
         <!--Archive-->
         <scene sceneID="3Zw-lK-L6x">

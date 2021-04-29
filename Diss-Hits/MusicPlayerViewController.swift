@@ -12,6 +12,7 @@ class MusicPlayerViewController: UIViewController {
     
     var queriedSongs = [PFFileObject]()
     var queriedAlbumCovers = [PFFileObject]()
+    var queriedNames = [String]()
     var currentSong = 0
     
     var lastPlayed = TimeInterval(0.0)
@@ -22,6 +23,8 @@ class MusicPlayerViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBOutlet weak var labelText: UILabel! // the label
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -64,6 +67,7 @@ class MusicPlayerViewController: UIViewController {
                         print(song["songTitle"]!)
                         self.queriedSongs.append(song["songFile"] as! PFFileObject)
                         self.queriedAlbumCovers.append(song["albumCover"] as! PFFileObject)
+                        self.queriedNames.append(song["songTitle"] as! String)
                     }))
                 }
             
@@ -135,7 +139,7 @@ class MusicPlayerViewController: UIViewController {
             return
         }
         
-        if self.currentSong > self.queriedSongs.count || self.currentSong < 0 {
+        if self.currentSong >= self.queriedSongs.count || self.currentSong < 0 {
             self.currentSong = 0
         }
         
@@ -171,6 +175,8 @@ class MusicPlayerViewController: UIViewController {
                 player.play()
                 
                 imageView.image = UIImage(data: try self.queriedAlbumCovers[self.currentSong].getData())
+                
+                labelText.text = self.queriedNames[self.currentSong]
                 
                 self.isInstantiated = true
                 
