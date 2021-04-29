@@ -31,12 +31,16 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let query = PFQuery(className: "Songs")
         query.includeKey("songTitle")
+        query.includeKey("artist")
+        query.includeKey("albumCover")
         query.limit = 20
+        
         
         query.findObjectsInBackground { (songs, error) in
             if songs != nil {
                 self.songs = songs!
                 self.songListView.reloadData()
+                print(self.songs)
             }
         }
     }
@@ -50,8 +54,25 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
         let song = songs[indexPath.row]
         
+        
+
         let title = song["songTitle"] as! String
         cell.songLabel.text = title
+        
+        let artist = song["artist"] as! PFUser
+        cell.artistLabel.text = artist.username
+        
+        if let albumCover = song["albumCover"] as? PFFileObject{
+            
+            albumCover.getDataInBackground { (imageData, error) in
+                if (error == nil) {
+                    cell.photoLabel.image = UIImage(data: imageData!)
+                }
+            }
+        }
+       
+    
+        
         
 //        let artist = song["artist"] as! PFUser
 //        cell.artistLabel.text = artist.email
