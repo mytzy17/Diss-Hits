@@ -10,16 +10,22 @@ import Parse
 import GoogleSignIn
 import SwiftUI
 
-class UserDetailsViewController: UIViewController {
+class UserDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userProfileImage: UIImageView!
     @IBOutlet weak var userBio: UILabel!
+    @IBOutlet weak var userSongs: UITableView!
+    
+    var songs = [PFObject]()
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userSongs.delegate = self
+        userSongs.dataSource = self
         
         userDeatails()
 
@@ -30,6 +36,20 @@ class UserDetailsViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
+        let query = PFQuery(className: "Songs")
+//        print(PFUser.self)
+//        print(PFUser.current())
+        query.whereKey("artist", equalTo: PFUser.current())
+//        query.limit = 20
+        
+        query.findObjectsInBackground { (songs, error) in
+            if songs != nil {
+                self.songs = songs!
+                self.userSongs.reloadData()
+            }
+        }
+        
 //        print("oiadoiwajodiwjaoidwoaj")
 //        self.userDeatails()
     }
@@ -73,15 +93,35 @@ class UserDetailsViewController: UIViewController {
                     
                     self.userBio.text = results[0]["Bio"] as! String
                     
-                    
-                    
-                    
-                   
                 
                }
                 
             }
         }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return songs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
+        let song = songs[indexPath.row]
+        
+        let title = song["songTitle"] as! String
+        cell.songLabel.text = title
+        
+        if let imageFile = song["albumCover"] as? PFFileObject {
+            
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.photoLabel.af.setImage(withURL: url)
+        }
+        
+        return cell
         
     }
     

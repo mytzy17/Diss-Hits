@@ -2,12 +2,15 @@
 //  PlaylistViewController.swift
 //  Diss-Hits
 //
-//  Created by Jesus Caballero on 4/28/21.
+//  Created by Jesus Caballero on 4/29/21.
 //
 
 import UIKit
+import Parse
 
 class PlaylistViewController: UIViewController {
+    
+    var songs: [PFObject: Any]?
 
     override func viewDidLoad() {
         super.viewDidLoad()

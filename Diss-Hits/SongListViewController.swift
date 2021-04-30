@@ -31,7 +31,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let query = PFQuery(className: "Songs")
         query.includeKeys(["songTitle", "author"])
-        query.limit = 20
+//        query.limit = 20
         
         query.findObjectsInBackground { (songs, error) in
             if songs != nil {
