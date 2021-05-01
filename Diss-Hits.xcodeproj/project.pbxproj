@@ -53,6 +53,7 @@
 		CF88C7AA261D2DEA00C479B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF88C7AC261D2DEA00C479B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CFBD30FA263B6199008947E4 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		CFBD30FC263CA5B5008947E4 /* Diss-Hits.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Diss-Hits.entitlements"; sourceTree = "<group>"; };
 		D15D0088FB881A1D6EC3F0A2 /* Pods-Diss-Hits.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diss-Hits.debug.xcconfig"; path = "Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +99,7 @@
 		CF88C79D261D2DEA00C479B2 /* Diss-Hits */ = {
 			isa = PBXGroup;
 			children = (
+				CFBD30FC263CA5B5008947E4 /* Diss-Hits.entitlements */,
 				B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */,
 				CF19964F263A6D9500EA44BC /* PlaylistTableViewCell.swift */,
 				CF88C79E261D2DEA00C479B2 /* AppDelegate.swift */,
@@ -428,7 +430,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Diss-Hits/Diss-Hits.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Y9M33Q8597;
 				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = "Diss-Hits/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -450,6 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Diss-Hits/Diss-Hits.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Diss-Hits/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
