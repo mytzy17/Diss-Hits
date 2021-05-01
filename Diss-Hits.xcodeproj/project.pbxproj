@@ -15,6 +15,8 @@
 		6A7F84C2262E71400021ED09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7F84C1262E71400021ED09 /* RegisterViewController.swift */; };
 		6A8927082628FC36002BCDD0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */; };
 		7F6515F02637A5CE007A098D /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */; };
+		8BD703A7263CCC5000393FD5 /* LikedSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD703A6263CCC5000393FD5 /* LikedSongsViewController.swift */; };
+		8BD703A9263CD24800393FD5 /* LikedSongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD703A8263CD24800393FD5 /* LikedSongTableViewCell.swift */; };
 		B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88031EC262635120031C869 /* MusicPlayerViewController.swift */; };
 		B88031F0262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */; };
 		CF199650263A6D9500EA44BC /* PlaylistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF19964F263A6D9500EA44BC /* PlaylistTableViewCell.swift */; };
@@ -39,6 +41,8 @@
 		6A7F84C1262E71400021ED09 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		8BD703A6263CCC5000393FD5 /* LikedSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedSongsViewController.swift; sourceTree = "<group>"; };
+		8BD703A8263CD24800393FD5 /* LikedSongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedSongTableViewCell.swift; sourceTree = "<group>"; };
 		B88031EC262635120031C869 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		B88031EF262635920031C869 /* Lobo Loco - Comming Back - Instrumental (ID 1355).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Lobo Loco - Comming Back - Instrumental (ID 1355).mp3"; sourceTree = "<group>"; };
 		CF19964F263A6D9500EA44BC /* PlaylistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */,
 				388328642639336600160D59 /* ArtistSongsViewController.swift */,
 				388328672639338A00160D59 /* ArtistPlaylistsViewController.swift */,
+				8BD703A6263CCC5000393FD5 /* LikedSongsViewController.swift */,
+				8BD703A8263CD24800393FD5 /* LikedSongTableViewCell.swift */,
 			);
 			path = "Diss-Hits";
 			sourceTree = "<group>";
@@ -272,8 +278,10 @@
 				CF34E68E2637C0E7008D3C64 /* UploadSongViewController.swift in Sources */,
 				7F6515F02637A5CE007A098D /* UserDetailsViewController.swift in Sources */,
 				CF199652263A700800EA44BC /* PlaylistsViewController.swift in Sources */,
+				8BD703A9263CD24800393FD5 /* LikedSongTableViewCell.swift in Sources */,
 				CF88C7A1261D2DEA00C479B2 /* SceneDelegate.swift in Sources */,
 				388328582638F63100160D59 /* SongCell.swift in Sources */,
+				8BD703A7263CCC5000393FD5 /* LikedSongsViewController.swift in Sources */,
 				CFBD30FB263B6199008947E4 /* PlaylistViewController.swift in Sources */,
 				388328652639336600160D59 /* ArtistSongsViewController.swift in Sources */,
 				B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */,
