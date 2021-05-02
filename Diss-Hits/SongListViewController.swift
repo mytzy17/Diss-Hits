@@ -21,7 +21,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         songListView.dataSource = self
         songListView.delegate = self
-        print("song list ***")
+        // print("song list ***")
 
         // Do any additional setup after loading the view.
     }
@@ -40,7 +40,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
             if songs != nil {
                 self.songs = songs!
                 self.songListView.reloadData()
-                print(self.songs)
+                // print(self.songs)
             }
         }
     }
@@ -70,32 +70,30 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             }
         }
-       
-    
-        
-        
-//        let artist = song["artist"] as! PFUser
-//        cell.artistLabel.text = artist.email
-        
-//        let imageFile = song["albumCover"] as! PFFileObject
-//        let urlString = imageFile.url!
-//        let url = URL(string: urlString)
-        
-//        cell.photoLabel.
-        
-//        print(song["albumCover"])
-        
         return cell
     }
 
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        print("loading new screen *******************")
+        
+        // Finding artist of selected song
+        let cell = sender as! UITableViewCell
+        let indexPath = songListView.indexPath(for: cell)!
+        let song = songs[indexPath.row]
+        let artistUser = song["artist"] as! PFUser
+        
+        // Pass data
+        let detailsViewController = segue.destination as! ArtistActivityViewController
+        detailsViewController.artist = artistUser
+        
+        // Animation to deselect
+        songListView.deselectRow(at: indexPath, animated: true)
     }
-    */
 
 }
