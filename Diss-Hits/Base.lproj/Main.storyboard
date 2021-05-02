@@ -727,7 +727,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpP-6r-u0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1078.4615384615383" y="2432.7014218009476"/>
+            <point key="canvasLocation" x="305" y="2450"/>
         </scene>
         <!--The Hits-->
         <scene sceneID="Toc-7x-RcE">
@@ -792,27 +792,6 @@
             </objects>
             <point key="canvasLocation" x="305" y="1682"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="ceP-UX-8mM">
-            <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="d2E-w6-6fv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="zfh-I6-juF"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RQf-VY-ued">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" systemColor="systemPurpleColor"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="mBt-u0-MjG" kind="relationship" relationship="viewControllers" id="VGb-8L-v5R"/>
-                        <segue destination="Dwg-QK-bvd" kind="relationship" relationship="viewControllers" id="TVs-jc-kFY"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yvU-g9-y7T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="315" y="2433"/>
-        </scene>
         <!--Artist Songs View Controller-->
         <scene sceneID="uOD-if-d21">
             <objects>
@@ -865,44 +844,6 @@
             </objects>
             <point key="canvasLocation" x="742" y="4036"/>
         </scene>
-        <!--Songs-->
-        <scene sceneID="BWX-vM-JCY">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mBt-u0-MjG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Songs" image="note" selectedImage="note" id="px6-cy-Kad"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7DK-SN-LTf">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GeB-xP-b2n" kind="relationship" relationship="rootViewController" id="n3N-KI-sWd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m2C-mS-Rzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-45" y="3215"/>
-        </scene>
-        <!--Playlists-->
-        <scene sceneID="yvq-gr-hEG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dwg-QK-bvd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Playlists" image="playlist" selectedImage="playlist" id="BWK-wO-kC4"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Xrj-8c-fMn">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="8sW-fL-B3z" kind="relationship" relationship="rootViewController" id="wzc-sC-70C"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d9P-NP-Mcc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="742" y="3215"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dOR-48-4hn"/>
@@ -917,10 +858,8 @@
         <image name="logo_transparent_120x120" width="120" height="120"/>
         <image name="logo_transparent_1_180x180" width="180" height="180"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="note" width="30" height="30"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="play" catalog="system" width="120" height="128"/>
-        <image name="playlist" width="30" height="30"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -10,8 +10,6 @@
 		385F6C53263E38380035DA8B /* ArtistActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F6C52263E38380035DA8B /* ArtistActivityViewController.swift */; };
 		388328552638F27000160D59 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328542638F27000160D59 /* SongListViewController.swift */; };
 		388328582638F63100160D59 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328572638F63100160D59 /* SongCell.swift */; };
-		388328652639336600160D59 /* ArtistSongsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328642639336600160D59 /* ArtistSongsViewController.swift */; };
-		388328682639338A00160D59 /* ArtistPlaylistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328672639338A00160D59 /* ArtistPlaylistsViewController.swift */; };
 		47EEBBA1504638CBCBF4B213 /* Pods_Diss_Hits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */; };
 		6A7F84C2262E71400021ED09 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7F84C1262E71400021ED09 /* RegisterViewController.swift */; };
 		6A8927082628FC36002BCDD0 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */; };
@@ -35,8 +33,6 @@
 		385F6C52263E38380035DA8B /* ArtistActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistActivityViewController.swift; sourceTree = "<group>"; };
 		388328542638F27000160D59 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
 		388328572638F63100160D59 /* SongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCell.swift; sourceTree = "<group>"; };
-		388328642639336600160D59 /* ArtistSongsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistSongsViewController.swift; sourceTree = "<group>"; };
-		388328672639338A00160D59 /* ArtistPlaylistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistPlaylistsViewController.swift; sourceTree = "<group>"; };
 		51E522DA6473670EAD4B8BF3 /* Pods-Diss-Hits.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diss-Hits.release.xcconfig"; path = "Target Support Files/Pods-Diss-Hits/Pods-Diss-Hits.release.xcconfig"; sourceTree = "<group>"; };
 		6A7F84C1262E71400021ED09 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		6A8927072628FC36002BCDD0 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
@@ -118,8 +114,6 @@
 				388328542638F27000160D59 /* SongListViewController.swift */,
 				388328572638F63100160D59 /* SongCell.swift */,
 				7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */,
-				388328642639336600160D59 /* ArtistSongsViewController.swift */,
-				388328672639338A00160D59 /* ArtistPlaylistsViewController.swift */,
 				385F6C52263E38380035DA8B /* ArtistActivityViewController.swift */,
 			);
 			path = "Diss-Hits";
@@ -272,14 +266,12 @@
 				6A7F84C2262E71400021ED09 /* RegisterViewController.swift in Sources */,
 				CF88C7A3261D2DEA00C479B2 /* ViewController.swift in Sources */,
 				CF88C79F261D2DEA00C479B2 /* AppDelegate.swift in Sources */,
-				388328682639338A00160D59 /* ArtistPlaylistsViewController.swift in Sources */,
 				CF34E68E2637C0E7008D3C64 /* UploadSongViewController.swift in Sources */,
 				7F6515F02637A5CE007A098D /* UserDetailsViewController.swift in Sources */,
 				CF199652263A700800EA44BC /* PlaylistsViewController.swift in Sources */,
 				CF88C7A1261D2DEA00C479B2 /* SceneDelegate.swift in Sources */,
 				388328582638F63100160D59 /* SongCell.swift in Sources */,
 				CFBD30FB263B6199008947E4 /* PlaylistViewController.swift in Sources */,
-				388328652639336600160D59 /* ArtistSongsViewController.swift in Sources */,
 				B88031ED262635120031C869 /* MusicPlayerViewController.swift in Sources */,
 				CF199650263A6D9500EA44BC /* PlaylistTableViewCell.swift in Sources */,
 			);
