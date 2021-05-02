@@ -641,22 +641,88 @@
                                     <action selector="segmentControlAction:" destination="C8T-D5-ao5" eventType="valueChanged" id="sVN-09-moT"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hd-2L-tOJ">
-                                <rect key="frame" x="0.0" y="132" width="390" height="187"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-pfp" translatesAutoresizingMaskIntoConstraints="NO" id="yvs-rs-mqW">
+                                <rect key="frame" x="10" y="134" width="110" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="Ibx-2r-C7H"/>
+                                    <constraint firstAttribute="height" constant="110" id="Mo9-8N-GNW"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxY-yB-eal">
+                                <rect key="frame" x="140" y="144" width="234" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Bio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLA-vh-EWA">
+                                <rect key="frame" x="140" y="177" width="234" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yjz-Vx-9v5">
+                                <rect key="frame" x="0.0" y="262" width="390" height="582"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="5LP-PS-8hZ" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5LP-PS-8hZ" id="JMb-xh-ncB" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TKp-gf-Tui">
+                                                    <rect key="frame" x="14" y="9" width="87" height="87"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNS-3I-tfi">
+                                                    <rect key="frame" x="115" y="16" width="263" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W7" family="Hiragino Sans" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YHC-sM-5cZ">
+                                                    <rect key="frame" x="127" y="56" width="263" height="27"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="16"/>
+                                                    <color key="textColor" systemColor="systemPurpleColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="YHC-sM-5cZ" id="vJD-t2-Yb0"/>
+                                            <outlet property="photoLabel" destination="TKp-gf-Tui" id="Ssc-Lb-kkS"/>
+                                            <outlet property="songLabel" destination="hNS-3I-tfi" id="H9E-XQ-qb1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YVY-lm-SAI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="bxY-yB-eal" firstAttribute="trailing" secondItem="YVY-lm-SAI" secondAttribute="trailing" id="0Uk-xD-UeA"/>
+                            <constraint firstItem="XLA-vh-EWA" firstAttribute="leading" secondItem="yvs-rs-mqW" secondAttribute="trailing" constant="20" id="3C2-Vx-bVn"/>
+                            <constraint firstItem="XLA-vh-EWA" firstAttribute="top" secondItem="bxY-yB-eal" secondAttribute="bottom" constant="10" id="C0v-kF-ziT"/>
+                            <constraint firstItem="bxY-yB-eal" firstAttribute="leading" secondItem="yvs-rs-mqW" secondAttribute="trailing" constant="20" id="FD3-9c-Nsy"/>
                             <constraint firstItem="KbF-Yv-ZyF" firstAttribute="top" secondItem="YVY-lm-SAI" secondAttribute="top" constant="5" id="Im8-uX-inU"/>
                             <constraint firstItem="YVY-lm-SAI" firstAttribute="trailing" secondItem="KbF-Yv-ZyF" secondAttribute="trailing" id="NU8-is-Vtj"/>
+                            <constraint firstItem="yvs-rs-mqW" firstAttribute="top" secondItem="KbF-Yv-ZyF" secondAttribute="bottom" constant="10" id="g19-Ap-Mhf"/>
+                            <constraint firstItem="bxY-yB-eal" firstAttribute="top" secondItem="KbF-Yv-ZyF" secondAttribute="bottom" constant="20" id="hnp-Yq-nem"/>
                             <constraint firstItem="KbF-Yv-ZyF" firstAttribute="leading" secondItem="YVY-lm-SAI" secondAttribute="leading" id="tpP-2c-FJn"/>
+                            <constraint firstItem="yvs-rs-mqW" firstAttribute="leading" secondItem="YVY-lm-SAI" secondAttribute="leading" constant="10" id="xvg-bX-Tog"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aqL-TM-DGY"/>
                     <connections>
+                        <outlet property="bioView" destination="XLA-vh-EWA" id="CKk-9J-aHU"/>
+                        <outlet property="pfpView" destination="yvs-rs-mqW" id="J0y-n6-kBc"/>
                         <outlet property="segmentControl" destination="KbF-Yv-ZyF" id="Peq-wm-FwB"/>
+                        <outlet property="usernameView" destination="bxY-yB-eal" id="7xG-8R-PvH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wpP-6r-u0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
