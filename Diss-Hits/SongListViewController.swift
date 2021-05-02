@@ -82,23 +82,18 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         // Pass the selected object to the new view controller.
         print("loading new screen *******************")
         
-        // Finding selected song
+        // Finding artist of selected song
         let cell = sender as! UITableViewCell
         let indexPath = songListView.indexPath(for: cell)!
         let song = songs[indexPath.row]
+        let artistUser = song["artist"] as! PFUser
         
-        let artist = song["artist"] as! PFUser
-        print("ARTIST INFO")
-        print(artist)
-       
-//        cell.artistLabel.text = artist.username
+        // Pass data
+        let detailsViewController = segue.destination as! ArtistActivityViewController
+        detailsViewController.artist = artistUser
         
-//        let detailsViewController = segue.destination as! ArtistActivityViewController
-//
-//        detailsViewController.artist = song
-//
-//        detailsViewController.artist = song
+        // Animation to deselect
+        songListView.deselectRow(at: indexPath, animated: true)
     }
-    
 
 }

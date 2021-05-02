@@ -15,7 +15,9 @@ class ArtistActivityViewController: UIViewController {
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
 //    var artist:[String:Any]!
-    var artist = [PFObject]()
+    var artist = PFUser()
+//    var artist = PFObject()
+//    let albumCover = song["albumCover"] as? PFFileObject
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
@@ -42,7 +44,8 @@ class ArtistActivityViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print("original")
+        print("NEW SCREEN")
+        print(artist)
     }
     
 
