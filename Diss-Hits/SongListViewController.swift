@@ -30,13 +30,17 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidAppear(true)
         
         let query = PFQuery(className: "Songs")
-        query.includeKeys(["songTitle", "author"])
-//        query.limit = 20
+        query.includeKey("songTitle")
+        query.includeKey("artist")
+        query.includeKey("albumCover")
+        query.limit = 20
+        
         
         query.findObjectsInBackground { (songs, error) in
             if songs != nil {
                 self.songs = songs!
                 self.songListView.reloadData()
+                print(self.songs)
             }
         }
     }
@@ -50,15 +54,28 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
         let song = songs[indexPath.row]
         
+        
+
         let title = song["songTitle"] as! String
         cell.songLabel.text = title
         
         let artist = song["artist"] as! PFUser
-//            print(artist)
+        cell.artistLabel.text = artist.username
+        
+        if let albumCover = song["albumCover"] as? PFFileObject{
             
-//            cell.artistLabel.text = artist.username
+            albumCover.getDataInBackground { (imageData, error) in
+                if (error == nil) {
+                    cell.photoLabel.image = UIImage(data: imageData!)
+                }
+            }
+        }
+       
+    
         
         
+//        let artist = song["artist"] as! PFUser
+//        cell.artistLabel.text = artist.email
         
 //        let imageFile = song["albumCover"] as! PFFileObject
 //        let urlString = imageFile.url!
@@ -67,19 +84,6 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
 //        cell.photoLabel.
         
 //        print(song["albumCover"])
-        
-        if let imageFile = song["albumCover"] as? PFFileObject {
-            
-//            print(imageFile)
-            
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-            
-            cell.photoLabel.af.setImage(withURL: url)
-        }
-        
-//        print(song)
-        
         
         return cell
     }
