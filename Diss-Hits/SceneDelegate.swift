@@ -20,27 +20,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-//        if(GIDSignIn.sharedInstance()?.hasPreviousSignIn() == true) {
+        if(GIDSignIn.sharedInstance()?.hasPreviousSignIn() == true) {
+            
+            if PFUser.current() != nil{
+                let main = UIStoryboard(name: "Main", bundle: nil)
+                let homePageView = main.instantiateViewController(withIdentifier: "HomePageView")
+                    
+                window?.rootViewController = homePageView
+            }else{
+                GIDSignIn.sharedInstance()?.signOut();
+            }
+            
+            
+//            let main = UIStoryboard(name: "Main", bundle: nil);
 //
-//            if PFUser.current() != nil{
-//                let main = UIStoryboard(name: "Main", bundle: nil)
-//                let homePageView = main.instantiateViewController(withIdentifier: "HomePageView")
+//            self.window = UIWindow(windowScene: windowScene)
 //
-//                window?.rootViewController = homePageView
-//            }else{
-//                GIDSignIn.sharedInstance()?.signOut();
-//            }
+//            //self.window?.rootViewController = storyboard.instantiateViewController(identifier: "HomePageView")
 //
-//
-////            let main = UIStoryboard(name: "Main", bundle: nil);
-////
-////            self.window = UIWindow(windowScene: windowScene)
-////
-////            //self.window?.rootViewController = storyboard.instantiateViewController(identifier: "HomePageView")
-////
-////            let HomePageView = main.instantiateViewController(identifier: "HomePageView");
-////            window?.rootViewController = HomePageView;
-//        }
+//            let HomePageView = main.instantiateViewController(identifier: "HomePageView");
+//            window?.rootViewController = HomePageView;
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -21,7 +21,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         songListView.dataSource = self
         songListView.delegate = self
-        print("song list ***")
+        // print("song list ***")
 
         // Do any additional setup after loading the view.
     }
@@ -40,7 +40,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
             if songs != nil {
                 self.songs = songs!
                 self.songListView.reloadData()
-                print(self.songs)
+                // print(self.songs)
             }
         }
     }
@@ -80,7 +80,24 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        print("loading new screen")
+        print("loading new screen *******************")
+        
+        // Finding selected song
+        let cell = sender as! UITableViewCell
+        let indexPath = songListView.indexPath(for: cell)!
+        let song = songs[indexPath.row]
+        
+        let artist = song["artist"] as! PFUser
+        print("ARTIST INFO")
+        print(artist)
+       
+//        cell.artistLabel.text = artist.username
+        
+//        let detailsViewController = segue.destination as! ArtistActivityViewController
+//
+//        detailsViewController.artist = song
+//
+//        detailsViewController.artist = song
     }
     
 

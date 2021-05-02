@@ -6,20 +6,23 @@
 //
 
 import UIKit
+import AVFoundation
+import Parse
+import AlamofireImage
 
 class ArtistActivityViewController: UIViewController {
-
+    
     @IBOutlet weak var segmentControl: UISegmentedControl!
     
-    @IBOutlet weak var label: UILabel!
-    
+//    var artist:[String:Any]!
+    var artist = [PFObject]()
     
     @IBAction func segmentControlAction(_ sender: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
             case 0:
-                label.text = "Artists' songs"
+                print("SONGS")
             case 1:
-                label.text = "Playlists"
+                print("PLAYLISTS")
             default:
                 break
         }
@@ -39,7 +42,7 @@ class ArtistActivityViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        label.text = "orignal"
+        print("original")
     }
     
 
