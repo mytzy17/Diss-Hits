@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -236,7 +236,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="65" id="DNN-TZ-BOE" customClass="PlaylistTableViewCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="360" height="65"/>
+                                        <rect key="frame" x="0.0" y="28" width="360" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNN-TZ-BOE" id="cHG-5Q-idn">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="65"/>
@@ -325,7 +325,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="vOm-RU-AhG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="351" height="105"/>
+                                        <rect key="frame" x="0.0" y="28" width="351" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOm-RU-AhG" id="BW2-b5-TxG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="351" height="105"/>
@@ -420,7 +420,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="Iws-Zo-hUl" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="358" height="105"/>
+                                        <rect key="frame" x="0.0" y="28" width="358" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iws-Zo-hUl" id="dPW-Gt-sKb" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="105"/>
@@ -623,6 +623,46 @@
             </objects>
             <point key="canvasLocation" x="2114" y="852"/>
         </scene>
+        <!--Artist Activity View Controller-->
+        <scene sceneID="nQR-hw-vQu">
+            <objects>
+                <viewController id="C8T-D5-ao5" customClass="ArtistActivityViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WpT-QE-vWF">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KbF-Yv-ZyF">
+                                <rect key="frame" x="0.0" y="93" width="390" height="32"/>
+                                <segments>
+                                    <segment title="Songs"/>
+                                    <segment title="Playlists"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentControlAction:" destination="C8T-D5-ao5" eventType="valueChanged" id="sVN-09-moT"/>
+                                </connections>
+                            </segmentedControl>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hd-2L-tOJ">
+                                <rect key="frame" x="0.0" y="132" width="390" height="187"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YVY-lm-SAI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KbF-Yv-ZyF" firstAttribute="top" secondItem="YVY-lm-SAI" secondAttribute="top" constant="5" id="Im8-uX-inU"/>
+                            <constraint firstItem="YVY-lm-SAI" firstAttribute="trailing" secondItem="KbF-Yv-ZyF" secondAttribute="trailing" id="NU8-is-Vtj"/>
+                            <constraint firstItem="KbF-Yv-ZyF" firstAttribute="leading" secondItem="YVY-lm-SAI" secondAttribute="leading" id="tpP-2c-FJn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aqL-TM-DGY"/>
+                    <connections>
+                        <outlet property="segmentControl" destination="KbF-Yv-ZyF" id="Peq-wm-FwB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wpP-6r-u0j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078.4615384615383" y="2432.7014218009476"/>
+        </scene>
         <!--The Hits-->
         <scene sceneID="Toc-7x-RcE">
             <objects>
@@ -637,7 +677,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="9pD-97-zKG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="105"/>
+                                        <rect key="frame" x="0.0" y="28" width="390" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pD-97-zKG" id="J3a-gp-MYn">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
@@ -668,7 +708,7 @@
                                             <outlet property="artistLabel" destination="ZKY-PE-A4g" id="U0P-KI-yS7"/>
                                             <outlet property="photoLabel" destination="HOd-TP-phW" id="Io5-ih-Q7p"/>
                                             <outlet property="songLabel" destination="ZLv-h4-hmO" id="NzS-K0-pLQ"/>
-                                            <segue destination="d2E-w6-6fv" kind="show" id="B1l-6u-v4n"/>
+                                            <segue destination="C8T-D5-ao5" kind="show" id="0PV-GS-tzc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

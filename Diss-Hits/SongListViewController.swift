@@ -70,32 +70,18 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
             }
         }
-       
-    
-        
-        
-//        let artist = song["artist"] as! PFUser
-//        cell.artistLabel.text = artist.email
-        
-//        let imageFile = song["albumCover"] as! PFFileObject
-//        let urlString = imageFile.url!
-//        let url = URL(string: urlString)
-        
-//        cell.photoLabel.
-        
-//        print(song["albumCover"])
-        
         return cell
     }
 
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        print("loading new screen")
     }
-    */
+    
 
 }
