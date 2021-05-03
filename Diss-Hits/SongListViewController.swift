@@ -21,7 +21,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         
         songListView.dataSource = self
         songListView.delegate = self
-        print("song list ***")
+        // print("song list ***")
 
         // Do any additional setup after loading the view.
     }
@@ -30,13 +30,17 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidAppear(true)
         
         let query = PFQuery(className: "Songs")
-        query.includeKeys(["songTitle", "author"])
-//        query.limit = 20
+        query.includeKey("songTitle")
+        query.includeKey("artist")
+        query.includeKey("albumCover")
+        query.limit = 20
+        
         
         query.findObjectsInBackground { (songs, error) in
             if songs != nil {
                 self.songs = songs!
                 self.songListView.reloadData()
+                // print(self.songs)
             }
         }
     }
@@ -50,48 +54,46 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
         let song = songs[indexPath.row]
         
+        
+
         let title = song["songTitle"] as! String
         cell.songLabel.text = title
         
         let artist = song["artist"] as! PFUser
-//            print(artist)
+        cell.artistLabel.text = artist.username
+        
+        if let albumCover = song["albumCover"] as? PFFileObject{
             
-//            cell.artistLabel.text = artist.username
-        
-        
-        
-//        let imageFile = song["albumCover"] as! PFFileObject
-//        let urlString = imageFile.url!
-//        let url = URL(string: urlString)
-        
-//        cell.photoLabel.
-        
-//        print(song["albumCover"])
-        
-        if let imageFile = song["albumCover"] as? PFFileObject {
-            
-//            print(imageFile)
-            
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-            
-            cell.photoLabel.af.setImage(withURL: url)
+            albumCover.getDataInBackground { (imageData, error) in
+                if (error == nil) {
+                    cell.photoLabel.image = UIImage(data: imageData!)
+                }
+            }
         }
-        
-//        print(song)
-        
-        
         return cell
     }
 
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        print("loading new screen *******************")
+        
+        // Finding artist of selected song
+        let cell = sender as! UITableViewCell
+        let indexPath = songListView.indexPath(for: cell)!
+        let song = songs[indexPath.row]
+        let artistUser = song["artist"] as! PFUser
+        
+        // Pass data
+        let detailsViewController = segue.destination as! ArtistActivityViewController
+        detailsViewController.artist = artistUser
+        
+        // Animation to deselect
+        songListView.deselectRow(at: indexPath, animated: true)
     }
-    */
 
 }
