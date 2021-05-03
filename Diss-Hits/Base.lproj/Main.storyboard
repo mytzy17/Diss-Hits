@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -236,7 +236,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="65" id="DNN-TZ-BOE" customClass="PlaylistTableViewCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="360" height="65"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="360" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNN-TZ-BOE" id="cHG-5Q-idn">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="65"/>
@@ -325,7 +325,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="vOm-RU-AhG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="351" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="351" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOm-RU-AhG" id="BW2-b5-TxG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="351" height="105"/>
@@ -420,7 +420,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="Iws-Zo-hUl" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="358" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="358" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iws-Zo-hUl" id="dPW-Gt-sKb" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="105"/>
@@ -676,7 +676,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="5LP-PS-8hZ" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5LP-PS-8hZ" id="JMb-xh-ncB" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
@@ -753,7 +753,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="9pD-97-zKG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pD-97-zKG" id="J3a-gp-MYn">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
