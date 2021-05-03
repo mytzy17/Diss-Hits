@@ -16,7 +16,13 @@ class UploadSongViewController: UIViewController, UIImagePickerControllerDelegat
  {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var songTitle: UITextField!
     weak var documentPicker: UIDocumentPickerViewController?
+    @IBOutlet weak var lyrics: UITextField!
+    @IBOutlet weak var checkMark: UIImageView!
+    
+    
+    var songFile: NSData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,22 +31,27 @@ class UploadSongViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     @IBAction func onCameraButton(_ sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            picker.sourceType = .camera
-        }
-        else {
-            picker.sourceType = .photoLibrary
-        }
-        
-        print("Hello")
-        
-        present(picker, animated: true, completion: nil)
-        
-        print("End")
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//
+//        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+//            picker.sourceType = .camera
+//        }
+//        else {
+//            picker.sourceType = .photoLibrary
+//        }
+//
+//        print("Hello")
+//
+//        present(picker, animated: true, completion: nil)
+//
+//        print("End")
+        let types = [kUTTypePNG, kUTTypeJPEG, kUTTypeImage, kUTTypeJPEG2000, kUTTypeRawImage]
+        let importMenu = UIDocumentMenuViewController(documentTypes: types as [String], in: .import)
+            importMenu.delegate = self
+            importMenu.modalPresentationStyle = .formSheet
+            self.present(importMenu, animated: true, completion: nil)
         
     }
     
@@ -61,7 +72,7 @@ class UploadSongViewController: UIViewController, UIImagePickerControllerDelegat
 //        controller.popoverPresentationController?.sourceView = sender
 //        controller.delegate = self
 //        present(controller, animated: true)
-        let types = [kUTTypeMP3, kUTTypeWaveformAudio, kUTTypeAudioInterchangeFileFormat, kUTTypeMIDIAudio, kUTTypeJPEG]
+        let types = [kUTTypeMP3, kUTTypeWaveformAudio, kUTTypeAudioInterchangeFileFormat, kUTTypeMIDIAudio, kUTTypeAudio]
         let importMenu = UIDocumentMenuViewController(documentTypes: types as [String], in: .import)
             importMenu.delegate = self
             importMenu.modalPresentationStyle = .formSheet
@@ -75,6 +86,25 @@ class UploadSongViewController: UIViewController, UIImagePickerControllerDelegat
             return
         }
         print("import result : \(myURL)")
+        
+        guard let image = UIImage(contentsOfFile: myURL.path) else {
+            print("Not image file")
+            
+            guard let song = NSData(contentsOfFile: myURL.path) else {
+                return
+                
+            }
+            
+            songFile = song;
+            
+            checkMark.isHidden = false
+            
+            print("Music file chosen")
+            return
+        }
+        
+        imageView.image = image
+        
     }
           
 
@@ -104,6 +134,41 @@ class UploadSongViewController: UIViewController, UIImagePickerControllerDelegat
         super.present(viewControllerToPresent, animated: flag, completion: completion)
     }
     
+    @IBAction func onSubmit(_ sender: Any) {
+        
+        let upload = PFObject(className: "Songs")
+        
+        upload["songTitle"] = songTitle.text!
+        upload["lyrics"] = lyrics.text!
+        upload["artist"] = PFUser.current()!
+        upload["genre"] = ["Classic rock"]
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        upload["albumCover"] = file
+        
+        let song = PFFileObject(data: songFile as Data)
+        
+        upload["songFile"] = song
+        
+        upload.saveInBackground { (success, error) in
+            
+            if success {
+                self.dismiss(animated: true, completion: nil)
+                print("Successfully uploaded!")
+            }
+            else {
+                print("Error Unsucessful post:\(error?.localizedDescription)")
+            }
+            
+        }
+        
+        
+    }
+    
+    
+    
 //    func mediaPicker(_ mediaPicker: MPMediaPickerController,
 //                     didPickMediaItems mediaItemCollection: MPMediaItemCollection) {
 //        // Get the system music player.
@@ -119,6 +184,8 @@ class UploadSongViewController: UIViewController, UIImagePickerControllerDelegat
 //    }
     
 
+    
+    
     /*
     // MARK: - Navigation
 
