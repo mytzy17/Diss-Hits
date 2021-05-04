@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		053F1865263BCB14008FB145 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053F1864263BCB14008FB145 /* EditProfileViewController.swift */; };
 		385F6C53263E38380035DA8B /* ArtistActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385F6C52263E38380035DA8B /* ArtistActivityViewController.swift */; };
+
 		388328552638F27000160D59 /* SongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328542638F27000160D59 /* SongListViewController.swift */; };
 		388328582638F63100160D59 /* SongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388328572638F63100160D59 /* SongCell.swift */; };
 		47EEBBA1504638CBCBF4B213 /* Pods_Diss_Hits.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */; };
@@ -29,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		053F1864263BCB14008FB145 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		3623A5D4BB56E754E379B082 /* Pods_Diss_Hits.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diss_Hits.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		385F6C52263E38380035DA8B /* ArtistActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistActivityViewController.swift; sourceTree = "<group>"; };
 		388328542638F27000160D59 /* SongListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +120,13 @@
 				388328542638F27000160D59 /* SongListViewController.swift */,
 				388328572638F63100160D59 /* SongCell.swift */,
 				7F6515EF2637A5CE007A098D /* UserDetailsViewController.swift */,
+
+				388328642639336600160D59 /* ArtistSongsViewController.swift */,
+				388328672639338A00160D59 /* ArtistPlaylistsViewController.swift */,
+				053F1864263BCB14008FB145 /* EditProfileViewController.swift */,
+
 				385F6C52263E38380035DA8B /* ArtistActivityViewController.swift */,
+
 			);
 			path = "Diss-Hits";
 			sourceTree = "<group>";
@@ -262,7 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				053F1865263BCB14008FB145 /* EditProfileViewController.swift in Sources */,
+
 				385F6C53263E38380035DA8B /* ArtistActivityViewController.swift in Sources */,
+
 				388328552638F27000160D59 /* SongListViewController.swift in Sources */,
 				6A8927082628FC36002BCDD0 /* HomeTableViewController.swift in Sources */,
 				6A7F84C2262E71400021ED09 /* RegisterViewController.swift in Sources */,
