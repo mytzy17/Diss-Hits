@@ -656,12 +656,13 @@
                                     <action selector="segmentControlAction:" destination="C8T-D5-ao5" eventType="valueChanged" id="sVN-09-moT"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-pfp" translatesAutoresizingMaskIntoConstraints="NO" id="yvs-rs-mqW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yvs-rs-mqW">
                                 <rect key="frame" x="10" y="134" width="110" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="110" id="Ibx-2r-C7H"/>
                                     <constraint firstAttribute="height" constant="110" id="Mo9-8N-GNW"/>
                                 </constraints>
+                                <imageReference key="image" image="default-pfp" renderingMode="original"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxY-yB-eal">
                                 <rect key="frame" x="140" y="144" width="234" height="23"/>
@@ -983,8 +984,10 @@
         <image name="logo_transparent_120x120" width="120" height="120"/>
         <image name="logo_transparent_1_180x180" width="180" height="180"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="note" width="30" height="30"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="play" catalog="system" width="120" height="128"/>
+        <image name="playlist" width="30" height="30"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
