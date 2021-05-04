@@ -118,6 +118,11 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             currentUser!["Bio"] = bioField.text
 
             currentUser!.saveInBackground()
+
+            let imageData = imageView.image!.pngData()
+            let file = PFFileObject(name: "image.png", data: imageData!)
+            
+            currentUser!["userPfp"] = file
         }
     }
     
