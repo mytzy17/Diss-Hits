@@ -45,7 +45,10 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         let query = PFQuery(className: "Songs")
 //        print(PFUser.self)
 //        print(PFUser.current())
-        query.whereKey("artist", equalTo: PFUser.current())
+        query.whereKey("artist", equalTo: PFUser.current()!)
+        query.includeKey("songTitle")
+        query.includeKey("artist")
+        query.includeKey("albumCover")
 //        query.limit = 20
         
         query.findObjectsInBackground { (songs, error) in
@@ -71,38 +74,52 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
     
     func userDeatails() {
         
-        let userData = appDelegate.getUserData();
-        let query = PFQuery(className:"_User");
-        query.whereKey("GID", equalTo: userData.userId);
+        let user = PFUser.current()!
         
-        query.findObjectsInBackground { (results: [PFObject]?, error: Error?)
-            in
-            if let error = error {
-                //could not find user
-                print(error.localizedDescription);
-            } else {
-                
-                if let results = results {
-                    print(results)
-                    
-//                    let username = results[0]["username"]
-                    
-                    if let imageFile = results[0]["userPfp"] as? PFFileObject {
-                        let urlString = imageFile.url!
-                        let url = URL(string: urlString)!
-                        
-                        self.userProfileImage.af.setImage(withURL: url)
-                    }
-                    
-                    self.username.text = results[0]["username"] as! String
-                    
-                    self.userBio.text = results[0]["Bio"] as! String
-                    
-                
-               }
-                
-            }
+        if let imageFile = user["userPfp"] as? PFFileObject {
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            self.userProfileImage.af.setImage(withURL: url)
         }
+        
+        self.username.text = user["username"] as! String
+        
+        self.userBio.text = user["Bio"] as! String
+        
+//
+//        let userData = appDelegate.getUserData();
+//        let query = PFQuery(className:"_User");
+//        query.whereKey("GID", equalTo: userData.userId);
+//
+//        query.findObjectsInBackground { (results: [PFObject]?, error: Error?)
+//            in
+//            if let error = error {
+//                //could not find user
+//                print(error.localizedDescription);
+//            } else {
+//
+//                if let results = results {
+//                    print(results)
+//
+////                    let username = results[0]["username"]
+//
+//                    if let imageFile = results[0]["userPfp"] as? PFFileObject {
+//                        let urlString = imageFile.url!
+//                        let url = URL(string: urlString)!
+//
+//                        self.userProfileImage.af.setImage(withURL: url)
+//                    }
+//
+//                    self.username.text = results[0]["username"] as! String
+//
+//                    self.userBio.text = results[0]["Bio"] as! String
+//
+//
+//               }
+//
+//            }
+//        }
         
     }
     
@@ -115,8 +132,13 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         let cell = tableView.dequeueReusableCell(withIdentifier: "SongCell") as! SongCell
         let song = songs[indexPath.row]
         
+        print(song)
+        
         let title = song["songTitle"] as! String
         cell.songLabel.text = title
+        
+        let artist = song["artist"] as! PFUser
+        cell.artistLabel.text = artist.username
         
         if let imageFile = song["albumCover"] as? PFFileObject {
             

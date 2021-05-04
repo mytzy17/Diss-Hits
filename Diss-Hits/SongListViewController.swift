@@ -33,7 +33,7 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         query.includeKey("songTitle")
         query.includeKey("artist")
         query.includeKey("albumCover")
-        query.limit = 20
+//        query.limit = 20
         
         
         query.findObjectsInBackground { (songs, error) in

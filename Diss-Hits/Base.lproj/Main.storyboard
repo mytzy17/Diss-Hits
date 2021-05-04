@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -237,7 +237,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PlaylistCell" rowHeight="65" id="DNN-TZ-BOE" customClass="PlaylistTableViewCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="360" height="65"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="360" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DNN-TZ-BOE" id="cHG-5Q-idn">
                                             <rect key="frame" x="0.0" y="0.0" width="360" height="65"/>
@@ -326,7 +326,7 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="vOm-RU-AhG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="351" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="351" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vOm-RU-AhG" id="BW2-b5-TxG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="351" height="105"/>
@@ -422,7 +422,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="Iws-Zo-hUl" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="358" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="358" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iws-Zo-hUl" id="dPW-Gt-sKb" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="105"/>
@@ -527,6 +527,9 @@
                                 <rect key="frame" x="171" y="658" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="onSubmit:" destination="7I6-tf-cJs" eventType="touchUpInside" id="ssA-gs-jjR"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_transparent_120x120" translatesAutoresizingMaskIntoConstraints="NO" id="Ucs-Rl-vRc">
                                 <rect key="frame" x="95" y="131" width="200" height="200"/>
@@ -536,13 +539,20 @@
                                     <outletCollection property="gestureRecognizers" destination="UJv-Wj-TKF" appends="YES" id="GqG-TW-onl"/>
                                 </connections>
                             </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tI7-qq-RA5">
+                                <rect key="frame" x="243" y="371" width="27" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NpD-Xs-aja"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Upload Song" id="zuc-46-eNa"/>
                     <connections>
+                        <outlet property="checkMark" destination="tI7-qq-RA5" id="fnk-yv-C5l"/>
                         <outlet property="imageView" destination="Ucs-Rl-vRc" id="N3l-5c-kBs"/>
+                        <outlet property="lyrics" destination="NqO-e8-KsN" id="Q6w-5y-gjd"/>
+                        <outlet property="songTitle" destination="QYl-21-aI5" id="RxW-3z-Mlb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ft4-y5-xeP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -671,7 +681,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="5LP-PS-8hZ" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5LP-PS-8hZ" id="JMb-xh-ncB" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
@@ -748,7 +758,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SongCell" rowHeight="105" id="9pD-97-zKG" customClass="SongCell" customModule="Diss_Hits" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="390" height="105"/>
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9pD-97-zKG" id="J3a-gp-MYn">
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="105"/>
@@ -964,6 +974,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backward" catalog="system" width="128" height="79"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="default-pfp" width="980" height="980"/>
         <image name="folder" catalog="system" width="128" height="97"/>
         <image name="forward" catalog="system" width="128" height="79"/>
