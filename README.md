@@ -34,13 +34,14 @@ An app where new/underground artists can upload their music without the algorith
     * - [X] Create an account
     * - [X] Build bio 
     * - [ ] Genre 
-    * - [ ] Account info 
-           * username 
-           * email 
-           * birthdate 
+    * - [X] Account info 
+           * - [X] username 
+           * - [ ] email 
+           * - [ ] birthdate
+    * - [X] Edit Account info 
         
 * **Playlist** 
-    * - [ ] a place to upload songs 
+    * - [X] a place to upload songs 
         * file size concern?
     * - [ ] conditionals 
            * explicit 
@@ -51,14 +52,14 @@ An app where new/underground artists can upload their music without the algorith
                * check box - all that apply 
 
 * **search bar**  
-    * - [ ] search by genre 
+    * - [X] search by genre 
     * - [X] search by title 
     * - [ ] search by artist name 
     * - [ ] search by lyrics 
     * - [ ] search by instrument
 
 * **home page** 
-    * - [ ] display existing playlist 
+    * - [X] display existing playlist 
     * - [ ] categories by genre 
          * prompts the user to start listening and create new playlists 
      
@@ -144,6 +145,15 @@ An app where new/underground artists can upload their music without the algorith
 ### [GIF] Sprint Plan 3
 <img src="http://g.recordit.co/0j3dfA5ZAO.gif" width=200>
 <img src="https://media0.giphy.com/media/nZ2J1ZWiTcCywhDJCT/giphy.gif" width=200>
+
+### [GIF] Sprint Plan 4
+<img src="https://media0.giphy.com/media/g5UKe4ambnTJIqALf5/giphy.gif?cid=790b7611a47c3276e7f8bc3624eeb4a07698dd30af45137a&rid=giphy.gif&ct=g" width=200>
+<img src="http://g.recordit.co/yJiIFb9Ojy.gif" width=200>
+<img src="http://g.recordit.co/IYIlJsdKqw.gif" width=200>
+<img src="http://g.recordit.co/CZMIQveQyn.gif" width=200>
+<img src="http://g.recordit.co/9WleJsJDTZ.gif" width=200>
+
+
 
 # Schema 
 ## Models
