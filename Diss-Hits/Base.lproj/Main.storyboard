@@ -626,7 +626,7 @@
         <!--Artist Activity View Controller-->
         <scene sceneID="nQR-hw-vQu">
             <objects>
-                <viewController id="C8T-D5-ao5" customClass="ArtistActivityViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArtistActivityViewController" id="C8T-D5-ao5" customClass="ArtistActivityViewController" customModule="Diss_Hits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WpT-QE-vWF">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

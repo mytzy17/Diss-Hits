@@ -95,7 +95,6 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
                     
                 
                }
-                
             }
         }
         

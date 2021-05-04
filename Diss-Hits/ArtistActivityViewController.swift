@@ -18,6 +18,11 @@ class ArtistActivityViewController: UIViewController {
     @IBOutlet weak var bioView: UILabel!
     
     var artist = PFUser()
+    var incomingSong : PFObject? {
+        didSet{
+            print(incomingSong)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +52,21 @@ class ArtistActivityViewController: UIViewController {
     func displayingSongs() {
         print("SONGS YAY")
         print(artist.objectId)
+        
+        
+        let query = PFQuery(className: "Songs")
+        query.whereKey("artist", equalTo: artist)
+        query.includeKey("songTitle")
+        query.includeKey("artist")
+        query.includeKey("albumCover")
+        query.limit = 20
+        
+        
+        query.findObjectsInBackground { (songs, error) in
+            if songs != nil {
+                 print("songs", songs)
+            }
+        }
         
         // will use object id to query artist songs
         // similar query user details

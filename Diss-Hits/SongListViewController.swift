@@ -73,6 +73,13 @@ class SongListViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("here", indexPath.row)
+        let song = songs[indexPath.row]
+        let vc = UIStoryboard (name: "Main", bundle: nil).instantiateViewController(identifier: "ArtistActivityViewController") as! ArtistActivityViewController
+        vc.incomingSong = song
+    }
+    
     /*
     // MARK: - Navigation
 
