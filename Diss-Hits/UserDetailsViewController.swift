@@ -34,6 +34,11 @@ class UserDetailsViewController: UIViewController, UITableViewDataSource, UITabl
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        userDeatails()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

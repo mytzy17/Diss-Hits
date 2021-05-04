@@ -92,14 +92,14 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     func changes(){
         nameField.delegate = self
-        if let value = UserDefaults.standard.string(forKey: "name"){
+        if let value = UserDefaults.standard.string(forKey: "username"){
             nameLabel.text = value
         } else{
             nameLabel.text = ""
         }
         
         bioField.delegate = self
-        if let value = UserDefaults.standard.string(forKey: "bio"){
+        if let value = UserDefaults.standard.string(forKey: "Bio"){
             bioLabel.text = value
         } else{
             bioLabel.text = ""
@@ -108,20 +108,17 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     @IBAction func onSaveButton(_ sender: Any) {
         nameLabel.text = nameField.text
-        UserDefaults.standard.set(nameField.text, forKey: "name")
+        UserDefaults.standard.set(nameField.text, forKey: "username")
         
         bioLabel.text = bioField.text
-        UserDefaults.standard.set(bioField.text, forKey: "bio")
-    }
-    
-    /*
-    // MARK: - Navigation
+        UserDefaults.standard.set(bioField.text, forKey: "Bio")
+        
+        let currentUser = PFUser.current()
+        if currentUser != nil {
+            currentUser!["username"] = nameField.text
+            currentUser!["Bio"] = bioField.text
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+            currentUser!.saveInBackground()
+        }
     }
-    */
-
 }
