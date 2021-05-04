@@ -89,6 +89,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         }
     }
     
+    func showAlert() {
+        let alert = UIAlertController(title: "Give it a Moment", message: "Saving Information", preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+        Timer.scheduledTimer(withTimeInterval: 6.0, repeats: false, block: { _ in alert.dismiss(animated: true, completion: nil)} )
+    }
+    
     func changes(){
         nameField.delegate = self
         if let value = UserDefaults.standard.string(forKey: "username"){
@@ -121,6 +127,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             let file = PFFileObject(name: "image.png", data: imageData!)
             
             currentUser!["userPfp"] = file
+            
+            showAlert()
             
             currentUser!.saveInBackground()
         }
