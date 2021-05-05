@@ -152,19 +152,60 @@ class UploadSongViewController: UIViewController, UIImagePickerControllerDelegat
         
         upload["songFile"] = song
         
-        upload.saveInBackground { (success, error) in
+        createSpinnerView(theUpload: upload);
+        
+//        upload.saveInBackground { (success, error) in
+//
+//            if success {
+//                self.dismiss(animated: true, completion: nil)
+//                print("Successfully uploaded!")
+//            }
+//            else {
+//                print("Error Unsucessful post:\(error?.localizedDescription)")
+//            }
+//
+//        }
+        
+        
+    }
+    
+    func createSpinnerView(theUpload: PFObject) {
+        let child = SpinnerViewController()
+
+        // add the spinner view controller
+        addChild(child)
+        child.view.frame = view.frame
+        view.addSubview(child.view)
+        child.didMove(toParent: self)
+        
+        DispatchQueue.main.async(execute: {
+            theUpload.saveInBackground { (success, error) in
             
             if success {
                 self.dismiss(animated: true, completion: nil)
                 print("Successfully uploaded!")
+                child.willMove(toParent: nil)
+                child.view.removeFromSuperview()
+                child.removeFromParent()
             }
             else {
                 print("Error Unsucessful post:\(error?.localizedDescription)")
+                child.willMove(toParent: nil)
+                child.view.removeFromSuperview()
+                child.removeFromParent()
             }
             
-        }
+            }
+        })
         
-        
+
+        // wait two seconds to simulate some work happening
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//            // then remove the spinner view controller
+//            child.willMove(toParent: nil)
+//            child.view.removeFromSuperview()
+//            child.removeFromParent()
+//        }
     }
     
     
