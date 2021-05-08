@@ -24,7 +24,7 @@ class MusicPlayerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var labelText: UILabel!
+    @IBOutlet weak var labelText: UILabel! // the label
     
     @IBOutlet weak var imageView: UIImageView!
     

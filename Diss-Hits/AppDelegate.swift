@@ -72,25 +72,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let standard = UINavigationBarAppearance()
-             
-        standard.configureWithOpaqueBackground()
-
-        standard.backgroundColor = UIColor(red: 0.06, green: 0.05, blue: 0.05, alpha: 1.00)
-//        standard.titlePositionAdjustment = UIOffset(horizontal: -30, vertical: 0)
-        standard.titleTextAttributes = [.foregroundColor: UIColor.white]
-          
-        let button = UIBarButtonItemAppearance(style: .plain)
-        button.normal.titleTextAttributes = [.foregroundColor: UIColor.systemYellow]
-        standard.buttonAppearance = button
-          
-        let done = UIBarButtonItemAppearance(style: .done)
-        done.normal.titleTextAttributes = [.foregroundColor: UIColor.systemGreen]
-        standard.doneButtonAppearance = done
-          
-        UINavigationBar.appearance().standardAppearance = standard
-        
-        
         let parseConfig = ParseClientConfiguration {
                         $0.applicationId = "uwqBr1CTjRwkLnUy5w1EfMmbHXrlmNGFzgKuClUF" // <- UPDATE
                         $0.clientKey = "jmJtsvTeo7W7Jn10uaj9IsnLU2F4TtgRCOC9Vvx2" // <- UPDATE
