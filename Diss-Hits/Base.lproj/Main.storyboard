@@ -476,13 +476,6 @@
                                     <segue destination="7I6-tf-cJs" kind="show" id="T7M-D9-FPT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEs-7L-uNC">
-                                <rect key="frame" x="163" y="144" width="211" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="pj9-0u-5EW"/>
                         <color key="backgroundColor" red="0.86935641753765291" green="0.81673154053051222" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
